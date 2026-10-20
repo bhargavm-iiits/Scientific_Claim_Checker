@@ -1,0 +1,50 @@
+{
+  "full": {
+    "rows": "gold",
+    "columns": "predicted",
+    "matrix": {
+      "SUPPORT": {
+        "SUPPORT": 8,
+        "CONTRADICT": 0,
+        "NEI": 0,
+        "ERROR": 0
+      },
+      "CONTRADICT": {
+        "SUPPORT": 1,
+        "CONTRADICT": 0,
+        "NEI": 3,
+        "ERROR": 0
+      },
+      "NEI": {
+        "SUPPORT": 4,
+        "CONTRADICT": 0,
+        "NEI": 4,
+        "ERROR": 0
+      }
+    }
+  },
+  "oracle": {
+    "rows": "gold",
+    "columns": "predicted",
+    "matrix": {
+      "SUPPORT": {
+        "SUPPORT": 8,
+        "CONTRADICT": 0,
+        "NEI": 0,
+        "ERROR": 0
+      },
+      "CONTRADICT": {
+        "SUPPORT": 2,
+        "CONTRADICT": 0,
+        "NEI": 2,
+        "ERROR": 0
+      },
+      "NEI": {
+        "SUPPORT": 2,
+        "CONTRADICT": 0,
+        "NEI": 6,
+        "ERROR": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,405 @@
+{
+  "run_id": "smoke_integration",
+  "identity": {
+    "suite": "smoke",
+    "split": "smoke",
+    "population_ids_sha256": "31497f954dfdb776ab1b89259eedcb4955b97cdf5c23412b46f2ae6e974f6c6e",
+    "population_size": 5,
+    "data": {
+      "corpus_sha256": "eb73cccad21f90053debc0500484616413e28933e693466498f10e2983dc41d4",
+      "gold_sha256": "b7e55ee8106eb3c71121f290e42d5f0caf5baa15c9b684521002d19c41363c5c"
+    },
+    "split_fingerprint": "5a43b63fa782753d3f3f3a3b6d07576846c87c538f41c362e9cf90ea017ead39",
+    "index_fingerprint": "3fa9e53a7857605c",
+    "model": {
+      "name": "qwen3:4b",
+      "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7"
+    },
+    "prompt_hashes": {
+      "evidence": "25376c48b37ac36e",
+      "judge": "ae8f024d7631b2f1",
+      "judge_only": "dc2ea4990866fadd",
+      "retrieve_judge": "2ea3577c957ee917"
+    },
+    "config_fingerprint": "701ade57778e8d20cdf75e23fa026d423281b797cb1ae54bbcf6052da445ed00"
+  },
+  "metrics": {
+    "full": {
+      "verdict": {
+        "n_claims": 5,
+        "unit": "claims",
+        "covered": 5,
+        "coverage": 1.0,
+        "correct": 2,
+        "accuracy": 0.4,
+        "accuracy_on_covered": 0.4,
+        "per_class": {
+          "SUPPORT": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5,
+            "support": 1
+          },
+          "CONTRADICT": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          "NEI": {
+            "precision": 0.5,
+            "recall": 0.3333333333333333,
+            "f1": 0.4,
+            "support": 3
+          }
+        },
+        "macro_f1": 0.3,
+        "macro_f1_labels": [
+          "SUPPORT",
+          "CONTRADICT",
+          "NEI"
+        ],
+        "confusion": {
+          "rows": "gold",
+          "columns": "predicted",
+          "matrix": {
+            "SUPPORT": {
+              "SUPPORT": 1,
+              "CONTRADICT": 0,
+              "NEI": 0,
+              "ERROR": 0
+            },
+            "CONTRADICT": {
+              "SUPPORT": 0,
+              "CONTRADICT": 0,
+              "NEI": 1,
+              "ERROR": 0
+            },
+            "NEI": {
+              "SUPPORT": 2,
+              "CONTRADICT": 0,
+              "NEI": 1,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "operational": {
+        "unit": "claims",
+        "requested": 5,
+        "ok": 5,
+        "errors": 0,
+        "operational_failure_rate": 0.0,
+        "errors_by_type": {},
+        "conflicts": 0,
+        "conflict_rate_of_ok": 0.0,
+        "conflict_rate_of_requested": 0.0
+      },
+      "latency_total": {
+        "n": 5,
+        "mean": 11.01418,
+        "median": 9.0003,
+        "p95": 20.613199999999996,
+        "unit": "seconds"
+      },
+      "latency_stages": {
+        "aggregate": {
+          "n": 5,
+          "mean": 0.0,
+          "median": 0.0,
+          "p95": 0.0,
+          "unit": "seconds"
+        },
+        "explain": {
+          "n": 5,
+          "mean": 0.0,
+          "median": 0.0,
+          "p95": 0.0,
+          "unit": "seconds"
+        },
+        "judge": {
+          "n": 5,
+          "mean": 2.7410399999999995,
+          "median": 3.0453,
+          "p95": 4.384440000000001,
+          "unit": "seconds"
+        },
+        "retrieve": {
+          "n": 5,
+          "mean": 1.2880600000000002,
+          "median": 1.202,
+          "p95": 1.60542,
+          "unit": "seconds"
+        },
+        "retrieve.bm25": {
+          "n": 5,
+          "mean": 0.01948,
+          "median": 0.0207,
+          "p95": 0.02368,
+          "unit": "seconds"
+        },
+        "retrieve.dense": {
+          "n": 5,
+          "mean": 0.025759999999999998,
+          "median": 0.0252,
+          "p95": 0.03034,
+          "unit": "seconds"
+        },
+        "retrieve.fuse": {
+          "n": 5,
+          "mean": 8e-05,
+          "median": 0.0001,
+          "p95": 0.0001,
+          "unit": "seconds"
+        },
+        "retrieve.rerank": {
+          "n": 5,
+          "mean": 1.24256,
+          "median": 1.1493,
+          "p95": 1.56132,
+          "unit": "seconds"
+        },
+        "select_evidence": {
+          "n": 5,
+          "mean": 3.84936,
+          "median": 3.5955,
+          "p95": 4.45938,
+          "unit": "seconds"
+        },
+        "supervise": {
+          "n": 5,
+          "mean": 0.0,
+          "median": 0.0,
+          "p95": 0.0,
+          "unit": "seconds"
+        },
+        "total": {
+          "n": 5,
+          "mean": 11.01418,
+          "median": 9.0003,
+          "p95": 20.613199999999996,
+          "unit": "seconds"
+        },
+        "validate_input": {
+          "n": 5,
+          "mean": 3.1294399999999998,
+          "median": 0.0003,
+          "p95": 12.517019999999997,
+          "unit": "seconds"
+        }
+      },
+      "retrieval": {
+        "unit": "claims (mean of per-claim document recall)",
+        "recall@3": 0.3,
+        "recall@3_n_claims": 5,
+        "evidence_doc_recall@3": 1.0,
+        "evidence_doc_recall@3_n_claims": 2,
+        "recall@10": 0.5,
+        "recall@10_n_claims": 5,
+        "evidence_doc_recall@10": 1.0,
+        "evidence_doc_recall@10_n_claims": 2,
+        "evidence_doc_recall_examined": 1.0,
+        "evidence_doc_recall_examined_n_claims": 2
+      },
+      "evidence_selected": {
+        "unit": "evidence sentences (micro)",
+        "claims": 5,
+        "annotated_pairs_with_predictions": 2,
+        "true_positive_sentences": 1,
+        "predicted_sentences_in_annotated_docs": 1,
+        "predicted_sentences_in_unannotated_docs": 16,
+        "reference_sentences": 2,
+        "precision": 1.0,
+        "recall": 0.5,
+        "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision."
+      },
+      "evidence_cited": {
+        "unit": "evidence sentences (micro)",
+        "claims": 5,
+        "annotated_pairs_with_predictions": 2,
+        "true_positive_sentences": 1,
+        "predicted_sentences_in_annotated_docs": 1,
+        "predicted_sentences_in_unannotated_docs": 9,
+        "reference_sentences": 2,
+        "precision": 1.0,
+        "recall": 0.5,
+        "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision."
+      },
+      "quotes": {
+        "unit": "quotations",
+        "quotes": 10,
+        "valid": 10,
+        "validity": 1.0
+      },
+      "downgraded_claims": 0
+    },
+    "oracle": {
+      "verdict": {
+        "n_claims": 5,
+        "unit": "claims",
+        "covered": 5,
+        "coverage": 1.0,
+        "correct": 2,
+        "accuracy": 0.4,
+        "accuracy_on_covered": 0.4,
+        "per_class": {
+          "SUPPORT": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5,
+            "support": 1
+          },
+          "CONTRADICT": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          "NEI": {
+            "precision": 0.5,
+            "recall": 0.3333333333333333,
+            "f1": 0.4,
+            "support": 3
+          }
+        },
+        "macro_f1": 0.3,
+        "macro_f1_labels": [
+          "SUPPORT",
+          "CONTRADICT",
+          "NEI"
+        ],
+        "confusion": {
+          "rows": "gold",
+          "columns": "predicted",
+          "matrix": {
+            "SUPPORT": {
+              "SUPPORT": 1,
+              "CONTRADICT": 0,
+              "NEI": 0,
+              "ERROR": 0
+            },
+            "CONTRADICT": {
+              "SUPPORT": 0,
+              "CONTRADICT": 0,
+              "NEI": 1,
+              "ERROR": 0
+            },
+            "NEI": {
+              "SUPPORT": 2,
+              "CONTRADICT": 0,
+              "NEI": 1,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "operational": {
+        "unit": "claims",
+        "requested": 5,
+        "ok": 5,
+        "errors": 0,
+        "operational_failure_rate": 0.0,
+        "errors_by_type": {},
+        "conflicts": 0,
+        "conflict_rate_of_ok": 0.0,
+        "conflict_rate_of_requested": 0.0
+      },
+      "latency_total": {
+        "n": 5,
+        "mean": 2.04554,
+        "median": 1.3109,
+        "p95": 4.4197999999999995,
+        "unit": "seconds"
+      },
+      "latency_stages": {
+        "aggregate": {
+          "n": 5,
+          "mean": 0.0,
+          "median": 0.0,
+          "p95": 0.0,
+          "unit": "seconds"
+        },
+        "explain": {
+          "n": 5,
+          "mean": 0.0,
+          "median": 0.0,
+          "p95": 0.0,
+          "unit": "seconds"
+        },
+        "judge": {
+          "n": 5,
+          "mean": 1.05746,
+          "median": 0.0069,
+          "p95": 3.1686599999999996,
+          "unit": "seconds"
+        },
+        "retrieve": {
+          "n": 5,
+          "mean": 2e-05,
+          "median": 0.0,
+          "p95": 7.999999999999999e-05,
+          "unit": "seconds"
+        },
+        "select_evidence": {
+          "n": 5,
+          "mean": 0.9816,
+          "median": 1.1872,
+          "p95": 1.2949000000000002,
+          "unit": "seconds"
+        },
+        "supervise": {
+          "n": 5,
+          "mean": 0.0,
+          "median": 0.0,
+          "p95": 0.0,
+          "unit": "seconds"
+        },
+        "total": {
+          "n": 5,
+          "mean": 2.04554,
+          "median": 1.3109,
+          "p95": 4.4197999999999995,
+          "unit": "seconds"
+        },
+        "validate_input": {
+          "n": 5,
+          "mean": 0.00028,
+          "median": 0.0003,
+          "p95": 0.00038,
+          "unit": "seconds"
+        }
+      },
+      "evidence_selected": {
+        "unit": "evidence sentences (micro)",
+        "claims": 5,
+        "annotated_pairs_with_predictions": 2,
+        "true_positive_sentences": 1,
+        "predicted_sentences_in_annotated_docs": 1,
+        "predicted_sentences_in_unannotated_docs": 5,
+        "reference_sentences": 2,
+        "precision": 1.0,
+        "recall": 0.5,
+        "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision."
+      },
+      "evidence_cited": {
+        "unit": "evidence sentences (micro)",
+        "claims": 5,
+        "annotated_pairs_with_predictions": 2,
+        "true_positive_sentences": 1,
+        "predicted_sentences_in_annotated_docs": 1,
+        "predicted_sentences_in_unannotated_docs": 5,
+        "reference_sentences": 2,
+        "precision": 1.0,
+        "recall": 0.5,
+        "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision."
+      },
+      "quotes": {
+        "unit": "quotations",
+        "quotes": 6,
+        "valid": 6,
+        "validity": 1.0
+      },
+      "downgraded_claims": 0
+    }
+  }
+}

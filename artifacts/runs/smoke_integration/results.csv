@@ -1,0 +1,3 @@
+variant,description,n_claims,coverage,accuracy,macro_f1,f1_support,f1_contradict,f1_nei,recall@3,recall@10,evidence_doc_recall_examined,evidence_precision_selected,evidence_recall_selected,evidence_precision_cited,evidence_recall_cited,quote_validity,conflict_rate,failure_rate,latency_mean_s,latency_median_s,latency_p95_s
+full,"Main product configuration (hybrid + rerank, k=3, evidence agent on).",5,1.0,0.4,0.3,0.5,0.0,0.4,0.3,0.5,1.0,1.0,0.5,1.0,0.5,1.0,0.0,0.0,11.01418,9.0003,20.613199999999996
+oracle,Reference (cited) abstracts supplied instead of retrieval; evidence agent + judge as normal.,5,1.0,0.4,0.3,0.5,0.0,0.4,,,,1.0,0.5,1.0,0.5,1.0,0.0,0.0,2.04554,1.3109,4.4197999999999995
