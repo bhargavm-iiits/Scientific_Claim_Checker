@@ -1,0 +1,16 @@
+# Experimental title-aware NLI alternative; see the separate validation report.
+product:
+  prompt_set: v1
+  judge_think: false
+  evidence_mode: full_abstract
+  judge_backend: nli
+retrieval:
+  pipeline_k: 3
+verifier:
+  model_dir: artifacts/models/nli_large_titlefamily_final_v1/epoch1
+  device: cpu
+  include_title: true
+  window_overlap: 2
+  support_threshold: 0.5
+  contradict_threshold: 0.9
+  min_retrieval_score: -2

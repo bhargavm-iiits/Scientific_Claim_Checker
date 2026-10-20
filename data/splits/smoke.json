@@ -1,0 +1,44 @@
+{
+  "name": "smoke",
+  "source_split": "train",
+  "claim_ids": [
+    "82",
+    "182",
+    "214",
+    "246",
+    "278",
+    "292",
+    "523",
+    "550",
+    "696",
+    "734",
+    "774",
+    "828",
+    "925",
+    "939",
+    "964",
+    "1043",
+    "1055",
+    "1148",
+    "1249",
+    "1276"
+  ],
+  "size": 20,
+  "class_counts": {
+    "CONTRADICT": 4,
+    "NEI": 8,
+    "SUPPORT": 8
+  },
+  "ids_sha256": "a4fe4dd41e918f6669e780b3918c2c14009f44909e9c2966bc27fb952e5f72d0",
+  "seed": 42,
+  "requested_size": 20,
+  "stratified_by": "claim-level reference label",
+  "allocation": {
+    "CONTRADICT": 4,
+    "NEI": 8,
+    "SUPPORT": 8
+  },
+  "source_fingerprint": "b7e55ee8106eb3c71121f290e42d5f0caf5baa15c9b684521002d19c41363c5c",
+  "excluded_annotation_conflicts": 0,
+  "created_at": "2026-10-20T14:12:30+00:00"
+}

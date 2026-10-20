@@ -1,0 +1,128 @@
+# Named evaluation variants. Every variant runs on the same frozen claim population.
+# Keys not given fall back to the defaults below.
+defaults:
+  strategy: pipeline          # pipeline | judge_only | single_prompt
+  k: 3
+  retrieval_method: hybrid    # bm25 | dense | hybrid
+  rerank: true
+  evidence_mode: evidence     # evidence | full_abstract
+  oracle: false
+
+variants:
+  judge_only:
+    description: Baseline - the judge sees only the claim (no retrieval).
+    strategy: judge_only
+  retrieve_judge_single_prompt:
+    description: Baseline - top-3 reranked abstracts, one prompt that judges and cites (doc_id, sentence_id).
+    strategy: single_prompt
+    k: 3
+  oracle:
+    description: Reference (cited) abstracts supplied instead of retrieval; evidence agent + judge as normal.
+    oracle: true
+  full:
+    description: Main product configuration (hybrid + rerank, k=3, evidence agent on).
+  evidence_off:
+    description: Ablation - judge reads the full abstract instead of selected evidence sentences.
+    evidence_mode: full_abstract
+  rerank_off:
+    description: Ablation - hybrid RRF ranking without the cross-encoder.
+    rerank: false
+  full_k1:
+    description: Ablation - only the top-1 abstract.
+    k: 1
+  full_k5:
+    description: Ablation - top-5 abstracts.
+    k: 5
+
+  # ---- v2 (added after final_v1; tuned on the dev_tune split only) --------------------------
+  full_v2:
+    description: v2 judge with qwen3 thinking for the judge step (budget-forced at judge_v2.think_budget_tokens); not chosen on dev (slower and less accurate than full_v2_nothink).
+    prompt_set: v2
+    judge_think: true
+  full_v2_nothink:
+    description: v2 PRODUCT configuration (frozen after dev tuning) - full pipeline with the v2 judge (checklist + reason before verdict, decision rules, consistency check), thinking off.
+    prompt_set: v2
+    judge_think: false
+  oracle_v2:
+    description: Oracle (reference abstracts supplied) with the frozen v2 product judge (thinking off).
+    oracle: true
+    prompt_set: v2
+    judge_think: false
+  candidate_v3:
+    description: Experimental instruction judge, full abstracts and training-only examples.
+    prompt_set: v3
+    evidence_mode: full_abstract
+    judge_think: false
+  lora_full:
+    description: Experimental train-only Qwen2.5 LoRA judge on retrieved full abstracts.
+    judge_backend: lora
+    evidence_mode: full_abstract
+  lora_oracle:
+    description: Experimental Qwen2.5 LoRA judge with reference abstracts supplied.
+    judge_backend: lora
+    evidence_mode: full_abstract
+    oracle: true
+  nli_full:
+    description: Experimental scientific NLI verifier on genuinely retrieved full abstracts.
+    judge_backend: nli
+    evidence_mode: full_abstract
+  nli_selected:
+    description: Experimental scientific NLI verifier on LLM-selected evidence.
+    judge_backend: nli
+    evidence_mode: evidence
+  nli_full_k1:
+    description: Experimental scientific NLI verifier on the top-ranked abstract.
+    judge_backend: nli
+    evidence_mode: full_abstract
+    k: 1
+  nli_oracle:
+    description: Scientific NLI judgement upper bound with the reference abstracts supplied.
+    judge_backend: nli
+    evidence_mode: full_abstract
+    oracle: true
+
+suites:
+  lora_dev:
+    split: dev_tune
+    variants: [lora_full]
+  lora_recheck:
+    split: final
+    variants: [lora_full]
+  lora_holdout:
+    split: accuracy_holdout
+    variants: [lora_full]
+  lora_oracle:
+    split: final
+    variants: [lora_oracle]
+  candidate_dev:
+    split: dev_tune
+    variants: [candidate_v3]
+  verifier_dev:
+    split: dev_tune
+    variants: [nli_full]
+  verifier_recheck:
+    split: final
+    variants: [nli_full]
+  verifier_oracle:
+    split: final
+    variants: [nli_oracle]
+  verifier_holdout:
+    split: accuracy_holdout
+    variants: [nli_full]
+  accuracy_holdout:
+    split: accuracy_holdout
+    variants: [candidate_v3]
+  smoke:
+    split: smoke
+    variants: [full, oracle]
+  final:
+    split: final
+    variants: [judge_only, retrieve_judge_single_prompt, oracle, full, evidence_off, rerank_off, full_k1, full_k5]
+  # Tuning population (stratified subset of the development split; see data/splits/dev_tune.json).
+  dev:
+    split: dev_tune
+    variants: [full, full_v2_nothink, full_v2]
+  # Run exactly once, after v2 is frozen (run id final_v2).
+  final_v2:
+    split: final
+    variants: [full_v2_nothink, oracle_v2, full_v2]

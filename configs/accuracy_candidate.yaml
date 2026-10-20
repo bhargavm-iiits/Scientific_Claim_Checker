@@ -1,0 +1,14 @@
+# Experimental profile. Validation results are reported separately; no promised score.
+model:
+  name: qwen3:4b-instruct-2507-q4_K_M
+  context_tokens: 8192
+  max_output_tokens: 768
+  think: false
+product:
+  prompt_set: v3
+  evidence_mode: full_abstract
+  judge_think: false
+judge_v3:
+  use_examples: true
+  examples_path: artifacts/examples/train.jsonl
+  max_context_chars: 8000

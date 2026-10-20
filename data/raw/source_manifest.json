@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-20T14:11:34+00:00",
+  "environment": {
+    "python": "3.14.6",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "datasets": "5.1.0",
+    "huggingface_hub": "1.33.0",
+    "pyarrow": "26.0.0"
+  },
+  "mteb_corpus": {
+    "repo_id": "mteb/scifact",
+    "config": "corpus",
+    "split": "corpus",
+    "call": "load_dataset(\"mteb/scifact\", \"corpus\")[\"corpus\"]",
+    "revision": "cf10ab6856b15b0e670ef8ae5dae4e266c12d035",
+    "columns": [
+      "_id",
+      "title",
+      "text"
+    ],
+    "features": {
+      "_id": "Value('string')",
+      "title": "Value('string')",
+      "text": "Value('string')"
+    },
+    "rows": 5183,
+    "content_sha256": "0d07ae64e2922d95f9a1af0415643a45a3bf62298e9a00eb3f0a3aa9c8267e4a"
+  },
+  "entailment_loader": {
+    "repo_id": "allenai/scifact_entailment",
+    "call": "load_dataset(\"allenai/scifact_entailment\")",
+    "trust_remote_code": false,
+    "success": false,
+    "exception": "builtins.RuntimeError: Dataset scripts are no longer supported, but found scifact_entailment.py"
+  },
+  "builder_script": {
+    "repo_id": "allenai/scifact_entailment",
+    "filename": "scifact_entailment.py",
+    "revision": "621da8dd0621d91b276ab5a98e2cd28bf3f90d38",
+    "executed": false,
+    "sha256": "1dc86899745af771a2270f7d7d8c2ce2fb6376d64d38116492e4d9f77c22a52b",
+    "local_path": "D:\\Additional Project\\Gen_AI\\data\\raw\\scifact\\builder\\scifact_entailment.py",
+    "archive_url_source": "builder_script"
+  },
+  "archive": {
+    "url": "https://scifact.s3-us-west-2.amazonaws.com/release/latest/data.tar.gz",
+    "path": "D:/Additional Project/Gen_AI/data/raw/scifact/data.tar.gz",
+    "sha256": "11c621288d41ac144d29b13b0f8503b3820b7d6e8b1f6ff24dff335c196d76be",
+    "bytes": 3115079,
+    "reused_cached_file": false,
+    "retrieved_at": "2026-10-20T14:12:20+00:00"
+  },
+  "extracted": {
+    "corpus.jsonl": {
+      "member": "data/corpus.jsonl",
+      "sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62",
+      "lines": 5183
+    },
+    "claims_train.jsonl": {
+      "member": "data/claims_train.jsonl",
+      "sha256": "f4c8fa82d8bd0653a9cc8d61a6ea48c25eacea64e90af5dbf390ebb1b74372f0",
+      "lines": 809
+    },
+    "claims_dev.jsonl": {
+      "member": "data/claims_dev.jsonl",
+      "sha256": "86f0435d08fdb65d1aa41d1472684f57e6e71930626497bdf4d7a9ec1a632217",
+      "lines": 300
+    }
+  },
+  "route": "fallback_official_archive_json",
+  "route_description": "MTEB corpus via load_dataset; claims and original sentence lists from the official SciFact archive referenced by the builder script, read with load_dataset('json'); the builder's claim-abstract transformation is reproduced in claim_checker.data.prepare.",
+  "json_loader_rows": {
+    "corpus": 5183,
+    "train": 809,
+    "validation": 300
+  }
+}

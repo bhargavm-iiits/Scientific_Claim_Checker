@@ -1,0 +1,23 @@
+# Exact versions of direct dependencies, verified in conda base (Python 3.14.6). Generated instead of uv.lock (conda base, no uv).
+datasets==5.1.0
+huggingface_hub==1.33.0
+numpy==2.5.2
+pandas==3.0.5
+scikit-learn==1.9.0
+torch==2.14.1
+sentence-transformers==6.1.0
+rank-bm25==0.2.2
+ollama==0.6.3
+httpx==0.28.1
+pydantic==2.13.4
+pyyaml==6.0.3
+jinja2==3.1.6
+langgraph==1.2.16
+streamlit==1.58.0
+requests==2.34.2
+pytest==9.0.3
+ruff==0.15.1
+jupyter==1.1.1
+nbconvert==7.17.1
+nbclient==0.11.0
+ipykernel==7.3.0

@@ -1,0 +1,105 @@
+{
+  "created_at": "2026-10-20T14:12:30+00:00",
+  "route": "fallback_official_archive_json",
+  "corpus": {
+    "mteb_documents": 5183,
+    "original_documents": 5183,
+    "ids_only_in_mteb": [],
+    "ids_only_in_original": [],
+    "title_mismatches": [],
+    "text_agreement": {
+      "exact_after_whitespace_normalization": 5183,
+      "equal_ignoring_whitespace": 0,
+      "different": 0,
+      "different_doc_ids_sample": []
+    },
+    "empty_abstracts": [],
+    "sentences_per_document": {
+      "min": 3,
+      "median": 8,
+      "max": 367,
+      "total": 45952
+    }
+  },
+  "splits": {
+    "train": {
+      "claims": 809,
+      "pairs": 919,
+      "pair_verdicts": {
+        "NEI": 355,
+        "CONTRADICT": 194,
+        "SUPPORT": 370
+      },
+      "claim_labels": {
+        "NEI": 304,
+        "CONTRADICT": 173,
+        "SUPPORT": 332
+      },
+      "annotation_conflicts": [],
+      "claims_without_cited_docs": [],
+      "cited_docs_missing_from_corpus": 0,
+      "evidence_docs_not_in_cited_doc_ids": [],
+      "evidence_positions_out_of_range": 0,
+      "evidence_sentences": 1025,
+      "hf_loader_cross_check": null
+    },
+    "validation": {
+      "claims": 300,
+      "pairs": 340,
+      "pair_verdicts": {
+        "NEI": 131,
+        "SUPPORT": 138,
+        "CONTRADICT": 71
+      },
+      "claim_labels": {
+        "NEI": 112,
+        "SUPPORT": 124,
+        "CONTRADICT": 64
+      },
+      "annotation_conflicts": [],
+      "claims_without_cited_docs": [],
+      "cited_docs_missing_from_corpus": 0,
+      "evidence_docs_not_in_cited_doc_ids": [],
+      "evidence_positions_out_of_range": 0,
+      "evidence_sentences": 366,
+      "hf_loader_cross_check": null
+    }
+  },
+  "splits_summary": {
+    "final": {
+      "size": 100,
+      "class_counts": {
+        "CONTRADICT": 21,
+        "NEI": 38,
+        "SUPPORT": 41
+      }
+    },
+    "development": {
+      "size": 808,
+      "class_counts": {
+        "CONTRADICT": 173,
+        "NEI": 303,
+        "SUPPORT": 332
+      }
+    },
+    "smoke": {
+      "size": 20,
+      "class_counts": {
+        "CONTRADICT": 4,
+        "NEI": 8,
+        "SUPPORT": 8
+      }
+    }
+  },
+  "overlap": {
+    "train_claims_removed_for_final_overlap": [
+      {
+        "train_claim_id": "871",
+        "final_claim_id": "870"
+      }
+    ],
+    "train_claims_overlapping_other_validation": [
+      "1291"
+    ]
+  }
+}

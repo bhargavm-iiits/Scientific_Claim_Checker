@@ -1,0 +1,23 @@
+# Experimental: development-selected; actual validation results are reported separately.
+product:
+  prompt_set: v1
+  judge_think: false
+  evidence_mode: evidence
+  judge_backend: nli
+retrieval:
+  pipeline_k: 5
+verifier:
+  model_dir: artifacts/models/nli_large_titlefamily_final_v1/epoch1
+  device: cpu
+  include_title: true
+  window_overlap: 2
+  support_threshold: 0.98
+  contradict_threshold: 0.97
+  min_retrieval_score: -2
+evidence_selector:
+  enabled: true
+  model_dir: artifacts/models/evidence_deberta_final_v2/epoch4
+  device: cpu
+  threshold: 0.475
+  maximum: 1
+  alpha: 1

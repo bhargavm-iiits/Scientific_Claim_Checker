@@ -1,0 +1,32 @@
+# Separate evidence collection and unmodified generic NLI reader.
+# This profile has no claimed 95% benchmark result.
+knowledge:
+  kind: general_science
+  name: "General science: OpenStax + USGS"
+paths:
+  raw_dir: data/raw/general_science
+  processed_dir: data/processed/general_science
+  splits_dir: data/splits/general_science
+  index_dir: artifacts/index/general_science
+  runs_dir: artifacts/runs/general_science
+  retrieval_dir: artifacts/retrieval/general_science
+  cache_dir: artifacts/cache/general_science
+data:
+  expected_corpus_size: 0
+product:
+  prompt_set: v1
+  judge_backend: nli
+  judge_think: false
+  evidence_mode: full_abstract
+retrieval:
+  pipeline_k: 3
+verifier:
+  model_dir: artifacts/models/nli_large_base
+  device: cpu
+  include_title: true
+  window_overlap: 1
+  support_threshold: 0.9
+  contradict_threshold: 0.9
+  min_retrieval_score: 0
+evidence_selector:
+  enabled: false

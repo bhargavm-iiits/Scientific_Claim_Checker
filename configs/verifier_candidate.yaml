@@ -1,0 +1,12 @@
+# Experimental scientific verifier. Select checkpoint/threshold on dev_tune only.
+product:
+  prompt_set: v1
+  judge_backend: nli
+  evidence_mode: full_abstract
+  judge_think: false
+verifier:
+  model_dir: artifacts/models/nli_scifact_final_v2/epoch3
+  device: cpu
+  threshold: 0.5
+  support_threshold: 0.5
+  contradict_threshold: 0.5

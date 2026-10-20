@@ -1,0 +1,12 @@
+# Experimental; development-selected settings, awaiting validation confirmation.
+product:
+  prompt_set: v1
+  judge_think: false
+  evidence_mode: full_abstract
+  judge_backend: nli
+verifier:
+  model_dir: artifacts/models/nli_large_scifact_final_v1/epoch2
+  device: cpu
+  threshold: 0.5
+  support_threshold: 0.5
+  contradict_threshold: 0.98

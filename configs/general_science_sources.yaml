@@ -1,0 +1,19 @@
+# Public textbook sources only. Snapshot revisions and actual license files are
+# captured before ingestion. No claims, labels or model predictions are downloaded.
+books:
+  - repository: openstax/osbooks-physics
+    subject: physics
+    title: Physics
+    url: https://openstax.org/details/books/physics
+  - repository: openstax/osbooks-chemistry-bundle
+    subject: chemistry
+    title: "Chemistry 2e and Chemistry: Atoms First 2e"
+    url: https://github.com/openstax/osbooks-chemistry-bundle
+  - repository: openstax/osbooks-biology-bundle
+    subject: biology
+    title: Biology 2e, Concepts of Biology, and Biology for AP Courses
+    url: https://github.com/openstax/osbooks-biology-bundle
+  - repository: openstax/osbooks-astronomy
+    subject: astronomy
+    title: Astronomy 2e
+    url: https://openstax.org/details/books/astronomy-2e

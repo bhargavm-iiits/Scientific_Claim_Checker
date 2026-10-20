@@ -1,0 +1,16 @@
+# Rejected candidate: validation300 accuracy70.00%, Macro-F1 .686956.
+# Best confirmed SciFact profile remains configs/verifier_title_candidate.yaml.
+product:
+  judge_backend: nli
+  evidence_mode: full_abstract
+  judge_think: false
+retrieval:
+  pipeline_k: 3
+verifier:
+  model_dir: artifacts\models\roberta_scifact_final_v1\epoch1
+  device: cpu
+  include_title: true
+  window_overlap: 2
+  min_retrieval_score: -2
+  support_threshold: 0.5
+  contradict_threshold: 0.5

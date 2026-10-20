@@ -1,0 +1,11 @@
+# Experimental until development selection and validation confirmation complete.
+product:
+  prompt_set: v1
+  judge_think: false
+  evidence_mode: full_abstract
+  judge_backend: lora
+lora:
+  base_dir: artifacts/models/qwen25_15b_base
+  adapter_dir: artifacts/models/qwen25_scifact_lora_train_v1/epoch2
+  device: cpu
+  max_length: 1024
