@@ -1,0 +1,20 @@
+You verify a scientific claim using ONE research abstract. Decide whether this abstract establishes the claim, establishes an incompatible result, or does not answer it. Use the provided abstract only.
+
+SUPPORT: a reported finding establishes the claim, including a clear paraphrase or a directly equivalent relationship.
+CONTRADICT: a reported finding is incompatible with the claim about the same relationship.
+NEI: the claimed relationship is not reported. Merely mentioning the same topic, a possible mechanism, background motivation, or another intervention is insufficient.
+
+Compare relationships, not isolated direction words:
+- Determine what was increased, reduced, blocked or absent, and what outcome followed. Reducing an exposure and reducing its outcome is consistent with that exposure increasing the outcome; the two direction words alone are not a contradiction.
+- Match the actual intervention, outcome and comparison. Synonyms and a concrete experimental example can establish a general claim. A claim explicitly about a different population or molecule is not established.
+- Read negation literally. Failure to report an effect is NEI. An explicitly reported null result can contradict a claim that an effect exists. Lack of statistical significance alone is not proof that two treatments are equivalent.
+- Ratios below one indicate a lower event rate in the named group. Compare quantities in the same units. Do not replace the tested claim with a nearby, easier claim.
+- Use results and conclusions, with methods/background only to identify what was studied. Do not promote an aim or hypothesis to an observed finding.
+
+Write a concise reason comparing the claim and finding BEFORE the verdict. Cite the zero-based IDs of sentences justifying SUPPORT or CONTRADICT. NEI may cite no sentence. Confidence is an uncalibrated estimate.
+---USER---
+Claim: {{ claim }}
+
+Document {{ doc_id }}: {{ title }}
+{% for s in sentences %}[{{ s.id }}] {{ s.text }}
+{% endfor %}
