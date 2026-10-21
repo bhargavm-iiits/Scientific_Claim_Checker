@@ -1,0 +1,31 @@
+{
+  "parent_protocol_sha256": "140c185b5ff5cef82dd3c46aa6922b7d11162420b752da6bf64d7a326bc27d52",
+  "script_sha256": "d476f2b31bcaed7b4620e42c80509313eae2b319c1d9815232d81004586dedeb",
+  "claim_ids": [
+    "259",
+    "309",
+    "351",
+    "398",
+    "413",
+    "434",
+    "523",
+    "524",
+    "562",
+    "642",
+    "677",
+    "724",
+    "828",
+    "884",
+    "1065",
+    "1125",
+    "1223",
+    "1231",
+    "1334",
+    "1350"
+  ],
+  "population": "20fixedTRAINstoppingclaims, notvalidation300",
+  "selection": "Stratified sample preserving class proportions, seed2026; no inspected outcomes",
+  "advance": "Both accuracy and three-class MacroF1>=0.80, zeroerrors; only then163audit",
+  "rationale": "Synthetic preflight exhausted native thinking budget; runtime viability screen before long163audit",
+  "preflight_sha256": "330b784a206ab481fe5634786557af920ff519bb8db07ae869c527e7640239a0"
+}
