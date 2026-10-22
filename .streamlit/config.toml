@@ -1,0 +1,48 @@
+# ClaimLens - dark research console theme for the Streamlit UI (ui/app.py).
+# The custom stylesheet in ui/assets/theme.css builds on these base colours.
+
+[server]
+address = "127.0.0.1"
+# Do not watch library modules for changes: Streamlit's watcher imports every transformers
+# submodule, and the vision ones fail without torchvision (not needed here), flooding the log.
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false
+
+[client]
+# Hide the developer menu and the "Deploy" button; keep the minimal viewer controls.
+toolbarMode = "minimal"
+showErrorDetails = true
+
+[theme]
+base = "dark"
+primaryColor = "#7C83FF"
+backgroundColor = "#0B1020"
+secondaryBackgroundColor = "#151B2E"
+textColor = "#E6E9F2"
+linkColor = "#A5AAFF"
+borderColor = "#262D45"
+showWidgetBorder = true
+baseRadius = "10px"
+font = "Inter, 'Segoe UI Variable Text', 'Segoe UI', system-ui, -apple-system, sans-serif"
+codeFont = "'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', monospace"
+headingFont = "Inter, 'Segoe UI Variable Display', 'Segoe UI', system-ui, sans-serif"
+baseFontSize = 15
+buttonRadius = "10px"
+greenColor = "#10B981"
+redColor = "#F43F5E"
+orangeColor = "#F59E0B"
+yellowColor = "#FBBF24"
+blueColor = "#60A5FA"
+violetColor = "#7C83FF"
+grayColor = "#94A3B8"
+dataframeBorderColor = "#232A42"
+dataframeHeaderBackgroundColor = "#131A2D"
+codeBackgroundColor = "#0F1528"
+showSidebarBorder = true
+
+[theme.sidebar]
+backgroundColor = "#0E1426"
+secondaryBackgroundColor = "#161D33"
+borderColor = "#222A42"
