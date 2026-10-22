@@ -1,0 +1,249 @@
+{
+  "claims": 163,
+  "paper_text_groups": 103,
+  "metrics": {
+    "baseline": {
+      "verdict": {
+        "n_claims": 163,
+        "unit": "claims",
+        "covered": 163,
+        "coverage": 1.0,
+        "correct": 118,
+        "accuracy": 0.7239263803680982,
+        "accuracy_on_covered": 0.7239263803680982,
+        "per_class": {
+          "SUPPORT": {
+            "precision": 0.8275862068965517,
+            "recall": 0.7164179104477612,
+            "f1": 0.768,
+            "support": 67
+          },
+          "CONTRADICT": {
+            "precision": 0.7741935483870968,
+            "recall": 0.6857142857142857,
+            "f1": 0.7272727272727273,
+            "support": 35
+          },
+          "NEI": {
+            "precision": 0.6216216216216216,
+            "recall": 0.7540983606557377,
+            "f1": 0.6814814814814815,
+            "support": 61
+          }
+        },
+        "macro_f1": 0.725584736251403,
+        "macro_f1_labels": [
+          "SUPPORT",
+          "CONTRADICT",
+          "NEI"
+        ],
+        "confusion": {
+          "rows": "gold",
+          "columns": "predicted",
+          "matrix": {
+            "SUPPORT": {
+              "SUPPORT": 48,
+              "CONTRADICT": 1,
+              "NEI": 18,
+              "ERROR": 0
+            },
+            "CONTRADICT": {
+              "SUPPORT": 1,
+              "CONTRADICT": 24,
+              "NEI": 10,
+              "ERROR": 0
+            },
+            "NEI": {
+              "SUPPORT": 9,
+              "CONTRADICT": 6,
+              "NEI": 46,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "retrieval": {
+        "unit": "claims (mean of per-claim document recall)",
+        "recall@3": 0.7188139059304703,
+        "recall@3_n_claims": 163,
+        "evidence_doc_recall@3": 0.8937908496732025,
+        "evidence_doc_recall@3_n_claims": 102,
+        "recall@10": 0.8803680981595092,
+        "recall@10_n_claims": 163,
+        "evidence_doc_recall@10": 0.9656862745098039,
+        "evidence_doc_recall@10_n_claims": 102,
+        "evidence_doc_recall_examined": 0.8741830065359476,
+        "evidence_doc_recall_examined_n_claims": 102
+      },
+      "citations": {
+        "unit": "evidence sentences (micro)",
+        "claims": 163,
+        "claims_in_recall_denominator": 163,
+        "errored_claims_included": 0,
+        "errored_annotated_pairs_included": 0,
+        "errored_reference_sentences_included": 0,
+        "annotated_pairs_with_predictions": 97,
+        "true_positive_sentences": 71,
+        "predicted_sentences_in_annotated_docs": 132,
+        "predicted_sentences_in_unannotated_docs": 87,
+        "reference_sentences": 194,
+        "precision": 0.5378787878787878,
+        "precision_denominator": 132,
+        "recall": 0.36597938144329895,
+        "recall_denominator": 194,
+        "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision. Claims with an operational error count in the recall denominator with zero predicted sentences."
+      }
+    },
+    "joint": {
+      "verdict": {
+        "n_claims": 163,
+        "unit": "claims",
+        "covered": 163,
+        "coverage": 1.0,
+        "correct": 122,
+        "accuracy": 0.7484662576687117,
+        "accuracy_on_covered": 0.7484662576687117,
+        "per_class": {
+          "SUPPORT": {
+            "precision": 0.8333333333333334,
+            "recall": 0.746268656716418,
+            "f1": 0.7874015748031497,
+            "support": 67
+          },
+          "CONTRADICT": {
+            "precision": 0.75,
+            "recall": 0.6857142857142857,
+            "f1": 0.7164179104477612,
+            "support": 35
+          },
+          "NEI": {
+            "precision": 0.676056338028169,
+            "recall": 0.7868852459016393,
+            "f1": 0.7272727272727273,
+            "support": 61
+          }
+        },
+        "macro_f1": 0.743697404174546,
+        "macro_f1_labels": [
+          "SUPPORT",
+          "CONTRADICT",
+          "NEI"
+        ],
+        "confusion": {
+          "rows": "gold",
+          "columns": "predicted",
+          "matrix": {
+            "SUPPORT": {
+              "SUPPORT": 50,
+              "CONTRADICT": 3,
+              "NEI": 14,
+              "ERROR": 0
+            },
+            "CONTRADICT": {
+              "SUPPORT": 2,
+              "CONTRADICT": 24,
+              "NEI": 9,
+              "ERROR": 0
+            },
+            "NEI": {
+              "SUPPORT": 8,
+              "CONTRADICT": 5,
+              "NEI": 48,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "retrieval": {
+        "unit": "claims (mean of per-claim document recall)",
+        "recall@3": 0.7188139059304703,
+        "recall@3_n_claims": 163,
+        "evidence_doc_recall@3": 0.8937908496732025,
+        "evidence_doc_recall@3_n_claims": 102,
+        "recall@10": 0.8803680981595092,
+        "recall@10_n_claims": 163,
+        "evidence_doc_recall@10": 0.9656862745098039,
+        "evidence_doc_recall@10_n_claims": 102,
+        "evidence_doc_recall_examined": 0.8741830065359476,
+        "evidence_doc_recall_examined_n_claims": 102
+      },
+      "citations": {
+        "unit": "evidence sentences (micro)",
+        "claims": 163,
+        "claims_in_recall_denominator": 163,
+        "errored_claims_included": 0,
+        "errored_annotated_pairs_included": 0,
+        "errored_reference_sentences_included": 0,
+        "annotated_pairs_with_predictions": 97,
+        "true_positive_sentences": 50,
+        "predicted_sentences_in_annotated_docs": 163,
+        "predicted_sentences_in_unannotated_docs": 114,
+        "reference_sentences": 194,
+        "precision": 0.3067484662576687,
+        "precision_denominator": 163,
+        "recall": 0.25773195876288657,
+        "recall_denominator": 194,
+        "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision. Claims with an operational error count in the recall denominator with zero predicted sentences."
+      }
+    }
+  },
+  "baseline_only_correct": 3,
+  "joint_only_correct": 7,
+  "paired_group_bootstrap95_difference_joint_minus_baseline": {
+    "accuracy": [
+      -0.01379310344827589,
+      0.06707419381240796
+    ],
+    "macro_f1": [
+      -0.02345968247657326,
+      0.06518312203366679
+    ]
+  },
+  "bootstrap_samples": 10000,
+  "seed": 42,
+  "selection": {
+    "epoch": 2,
+    "stop_loss": 0.5781389265129827,
+    "validation_used": false,
+    "weights_sha256": "536e898c2d22f12a316877762241a9fc5cff96f41ce042ab77d7879d677a896d",
+    "heads_sha256": "b3a7bcc349a9e7966081b5aa22297c4f9b3d2daa2e2ca6dbd0afa80d2f34d1cd"
+  },
+  "learning_curve": [
+    {
+      "epoch": 1,
+      "weighted_train_loss": 0.9415972079541604,
+      "unweighted_stop_joint_loss": 0.7003529606616661,
+      "improved": true,
+      "elapsed_seconds": 302.4046099999978,
+      "peak_gpu_gib": 2.2443575859069824
+    },
+    {
+      "epoch": 2,
+      "weighted_train_loss": 0.6473610877436776,
+      "unweighted_stop_joint_loss": 0.5781389265129827,
+      "improved": true,
+      "elapsed_seconds": 241.90271970000322,
+      "peak_gpu_gib": 2.2443575859069824
+    },
+    {
+      "epoch": 3,
+      "weighted_train_loss": 0.5790923960534613,
+      "unweighted_stop_joint_loss": 0.577198368407888,
+      "improved": false,
+      "elapsed_seconds": 249.87033130000054,
+      "peak_gpu_gib": 2.2443575859069824
+    }
+  ],
+  "gate_passed": false,
+  "quotes": {
+    "unit": "quotations",
+    "quotes": 277,
+    "valid": 277,
+    "validity": 1.0
+  },
+  "limitations": "Reused TRAIN audit, not blind. Intervals do not correct experiment selection. Baseline is the saved same-weight common-window control from polarity audit; model architecture, training objective and verdict cutoffs differ. Not a causal ablation or proof against overfitting.",
+  "input_sha256": {
+    "candidate": "600338f550c46af7d93d74ce6a38dca8b0ca94b5a1fdfaee86f3ead6d5e95205",
+    "baseline": "46f241168a96a11abe860fd4322e261b97c4e82a76f4926c0c457e4c3991daa4"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "training_name": "qwen25_scifact_lora_train_v1",
+  "selection_population": "dev_tune (120 claims)",
+  "rule": "Macro-F1, then accuracy, then earlier epoch",
+  "results": [
+    {
+      "epoch": 1,
+      "run": "qwen25_scifact_lora_train_v1_epoch1_dev120",
+      "accuracy": 0.6666666666666666,
+      "macro_f1": 0.6526769235896731,
+      "metrics_sha256": "2e948d41a10f24af8ca78c1c504fc17f7cc81aebdc26f3fef32bc0a298dc76a6"
+    },
+    {
+      "epoch": 2,
+      "run": "qwen25_scifact_lora_train_v1_epoch2_dev120",
+      "accuracy": 0.7166666666666667,
+      "macro_f1": 0.7069571090847687,
+      "metrics_sha256": "f9ef338c4e89179d85964907aa0e55671aa55142af7ea13079be5947e35e68b9"
+    },
+    {
+      "epoch": 3,
+      "run": "qwen25_scifact_lora_train_v1_epoch3_dev120",
+      "accuracy": 0.7083333333333334,
+      "macro_f1": 0.7044206773618539,
+      "metrics_sha256": "471818062c5df3f50a29b0325f9f5a0bbcca2ce800860c12eec6e64608d6c3d0"
+    }
+  ],
+  "chosen": {
+    "epoch": 2,
+    "run": "qwen25_scifact_lora_train_v1_epoch2_dev120",
+    "accuracy": 0.7166666666666667,
+    "macro_f1": 0.7069571090847687,
+    "metrics_sha256": "f9ef338c4e89179d85964907aa0e55671aa55142af7ea13079be5947e35e68b9"
+  },
+  "training_manifest_sha256": "70f0afd9a09f586a416422af137ed090546da06302fed2dad27c1daaa2986f50",
+  "plan_sha256": "49e10e054288ba4c73896e3bab1961bd5d445c37c02680fcbbc59ef41567a710",
+  "validation_used_for_selection": false
+}

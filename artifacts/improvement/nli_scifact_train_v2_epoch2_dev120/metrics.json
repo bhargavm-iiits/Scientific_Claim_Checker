@@ -1,0 +1,59 @@
+{
+  "n_claims": 120,
+  "unit": "claims",
+  "covered": 120,
+  "coverage": 1.0,
+  "correct": 81,
+  "accuracy": 0.675,
+  "accuracy_on_covered": 0.675,
+  "per_class": {
+    "SUPPORT": {
+      "precision": 0.7058823529411765,
+      "recall": 0.7346938775510204,
+      "f1": 0.72,
+      "support": 49
+    },
+    "CONTRADICT": {
+      "precision": 0.8125,
+      "recall": 0.5,
+      "f1": 0.6190476190476191,
+      "support": 26
+    },
+    "NEI": {
+      "precision": 0.6037735849056604,
+      "recall": 0.7111111111111111,
+      "f1": 0.6530612244897959,
+      "support": 45
+    }
+  },
+  "macro_f1": 0.6640362811791384,
+  "macro_f1_labels": [
+    "SUPPORT",
+    "CONTRADICT",
+    "NEI"
+  ],
+  "confusion": {
+    "rows": "gold",
+    "columns": "predicted",
+    "matrix": {
+      "SUPPORT": {
+        "SUPPORT": 36,
+        "CONTRADICT": 1,
+        "NEI": 12,
+        "ERROR": 0
+      },
+      "CONTRADICT": {
+        "SUPPORT": 4,
+        "CONTRADICT": 13,
+        "NEI": 9,
+        "ERROR": 0
+      },
+      "NEI": {
+        "SUPPORT": 11,
+        "CONTRADICT": 2,
+        "NEI": 32,
+        "ERROR": 0
+      }
+    }
+  }
+}

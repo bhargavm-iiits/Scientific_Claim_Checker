@@ -1,0 +1,17 @@
+{
+  "stage": "polarity",
+  "script_sha256": "9dacb2fb751e2b08ed9632762baf6280471a48cba28a5cf9c4e890a2db55574e",
+  "native_plan_sha256": "140c185b5ff5cef82dd3c46aa6922b7d11162420b752da6bf64d7a326bc27d52",
+  "native_screen_plan_sha256": "890e97a59fbc61a20ed3bd52c3a7dbd18275c6eb729ef15126f532e428c89400",
+  "polarity_plan_sha256": "8f758156e8e219d1cf6ac929c1db9a5d4a0a4f1dddd086d64e61c499488b9905",
+  "reason": "Original native run experienced RAM allocation failure during concurrent CPU-model experiment; preserve all original errors and repeat fixed screens without competing model jobs.",
+  "changes_to_claims_prompts_weights_thresholds": false,
+  "cache": "Same deterministic native response cache; cache hits are recorded, not new cold latency measurements",
+  "runtime": {
+    "python": "3.14.6",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.20.2",
+    "sentence-transformers": "6.1.0",
+    "ollama": "0.6.3"
+  }
+}

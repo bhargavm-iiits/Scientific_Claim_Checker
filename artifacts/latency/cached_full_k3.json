@@ -1,0 +1,755 @@
+{
+  "benchmark": "full_pipeline_with_llm_cache",
+  "created_at": "2026-10-20T19:13:02+00:00",
+  "command": "python -m claim_checker latency --suite smoke --limit 10 --repeat",
+  "process": "fresh Python process; one ClaimChecker (new in-process retrieval cache)",
+  "split": "smoke",
+  "claim_ids": [
+    "82",
+    "182",
+    "214",
+    "246",
+    "278",
+    "292",
+    "523",
+    "550",
+    "696",
+    "734"
+  ],
+  "n_claims": 10,
+  "configuration": {
+    "k": 3,
+    "retrieval_method": "hybrid",
+    "rerank": true,
+    "evidence_mode": "evidence",
+    "llm_disk_cache": true,
+    "model": "qwen3:4b",
+    "model_digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+    "think": false,
+    "temperature": 0.0,
+    "num_ctx": 8192,
+    "embedding_device": "cpu",
+    "index_fingerprint": "3fa9e53a7857605c"
+  },
+  "warmup_seconds": {
+    "resources": 30.1393,
+    "first_claim": 0.8952,
+    "total": 31.0345,
+    "first_claim_id": "774",
+    "first_claim_timings": {
+      "validate_input": 0.0004,
+      "retrieve.bm25": 0.0488,
+      "retrieve.dense": 0.0291,
+      "retrieve.fuse": 0.0001,
+      "retrieve.rerank": 0.7916,
+      "retrieve": 0.8698,
+      "select_evidence": 0.0096,
+      "judge": 0.0001,
+      "aggregate": 0.0,
+      "supervise": 0.0,
+      "explain": 0.0,
+      "total": 0.8937
+    },
+    "ollama_models_resident_before": [
+      {
+        "name": "qwen3:4b",
+        "size_vram": 3877571133,
+        "expires_at": "2026-10-21T01:12:07.5373995+05:30"
+      }
+    ]
+  },
+  "errors": 0,
+  "stages_seconds": {
+    "validate_input": {
+      "n": 10,
+      "mean": 0.00032,
+      "median": 0.0003,
+      "p95": 0.0004,
+      "unit": "seconds"
+    },
+    "retrieve": {
+      "n": 10,
+      "mean": 1.24242,
+      "median": 1.1208,
+      "p95": 1.6597399999999998,
+      "unit": "seconds"
+    },
+    "retrieve.bm25": {
+      "n": 10,
+      "mean": 0.027990000000000004,
+      "median": 0.02695,
+      "p95": 0.03497,
+      "unit": "seconds"
+    },
+    "retrieve.dense": {
+      "n": 10,
+      "mean": 0.02883,
+      "median": 0.028900000000000002,
+      "p95": 0.032025,
+      "unit": "seconds"
+    },
+    "retrieve.fuse": {
+      "n": 10,
+      "mean": 0.0001,
+      "median": 0.0001,
+      "p95": 0.0001,
+      "unit": "seconds"
+    },
+    "retrieve.rerank": {
+      "n": 10,
+      "mean": 1.1853399999999998,
+      "median": 1.06325,
+      "p95": 1.5992449999999996,
+      "unit": "seconds"
+    },
+    "select_evidence": {
+      "n": 10,
+      "mean": 0.00315,
+      "median": 0.0030499999999999998,
+      "p95": 0.003939999999999999,
+      "unit": "seconds"
+    },
+    "judge": {
+      "n": 10,
+      "mean": 0.0027700000000000003,
+      "median": 0.0024000000000000002,
+      "p95": 0.006214999999999995,
+      "unit": "seconds"
+    },
+    "aggregate": {
+      "n": 10,
+      "mean": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "unit": "seconds"
+    },
+    "supervise": {
+      "n": 10,
+      "mean": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "unit": "seconds"
+    },
+    "explain": {
+      "n": 10,
+      "mean": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "unit": "seconds"
+    },
+    "total": {
+      "n": 10,
+      "mean": 1.25489,
+      "median": 1.1314,
+      "p95": 1.6712599999999997,
+      "unit": "seconds"
+    }
+  },
+  "cache_check": {
+    "llm_cache_hits_total": 51,
+    "retrieval_cache_hits": 0,
+    "llm_calls_total": 0
+  },
+  "claims": [
+    {
+      "claim_id": "82",
+      "gold_label": "NEI",
+      "status": "ok",
+      "verdict": "NEI",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0004,
+        "retrieve.bm25": 0.0287,
+        "retrieve.dense": 0.0279,
+        "retrieve.fuse": 0.0001,
+        "retrieve.rerank": 1.0454,
+        "retrieve": 1.1023,
+        "select_evidence": 0.0035,
+        "judge": 0.0086,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0,
+        "total": 1.1222
+      },
+      "llm_calls": 0,
+      "llm_cache_hits": 4,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 1,
+      "judge_model_calls_skipped": 2
+    },
+    {
+      "claim_id": "182",
+      "gold_label": "NEI",
+      "status": "ok",
+      "verdict": "SUPPORT",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0003,
+        "retrieve.bm25": 0.0261,
+        "retrieve.dense": 0.0296,
+        "retrieve.fuse": 0.0001,
+        "retrieve.rerank": 1.0663,
+        "retrieve": 1.1222,
+        "select_evidence": 0.003,
+        "judge": 0.0032,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0,
+        "total": 1.1349
+      },
+      "llm_calls": 0,
+      "llm_cache_hits": 6,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 7,
+      "judge_model_calls_skipped": 0
+    },
+    {
+      "claim_id": "214",
+      "gold_label": "NEI",
+      "status": "ok",
+      "verdict": "SUPPORT",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0003,
+        "retrieve.bm25": 0.0342,
+        "retrieve.dense": 0.0327,
+        "retrieve.fuse": 0.0001,
+        "retrieve.rerank": 1.7486,
+        "retrieve": 1.8158,
+        "select_evidence": 0.003,
+        "judge": 0.002,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0,
+        "total": 1.8266
+      },
+      "llm_calls": 0,
+      "llm_cache_hits": 5,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 4,
+      "judge_model_calls_skipped": 1
+    },
+    {
+      "claim_id": "246",
+      "gold_label": "SUPPORT",
+      "status": "ok",
+      "verdict": "SUPPORT",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0003,
+        "retrieve.bm25": 0.0228,
+        "retrieve.dense": 0.0295,
+        "retrieve.fuse": 0.0001,
+        "retrieve.rerank": 1.2607,
+        "retrieve": 1.3134,
+        "select_evidence": 0.0031,
+        "judge": 0.0028,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0,
+        "total": 1.3258
+      },
+      "llm_calls": 0,
+      "llm_cache_hits": 6,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 5,
+      "judge_model_calls_skipped": 0
+    },
+    {
+      "claim_id": "278",
+      "gold_label": "CONTRADICT",
+      "status": "ok",
+      "verdict": "NEI",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0003,
+        "retrieve.bm25": 0.0278,
+        "retrieve.dense": 0.0312,
+        "retrieve.fuse": 0.0001,
+        "retrieve.rerank": 1.0602,
+        "retrieve": 1.1194,
+        "select_evidence": 0.0028,
+        "judge": 0.0001,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0,
+        "total": 1.1279
+      },
+      "llm_calls": 0,
+      "llm_cache_hits": 3,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 0,
+      "judge_model_calls_skipped": 3
+    },
+    {
+      "claim_id": "292",
+      "gold_label": "SUPPORT",
+      "status": "ok",
+      "verdict": "SUPPORT",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0002,
+        "retrieve.bm25": 0.0234,
+        "retrieve.dense": 0.0285,
+        "retrieve.fuse": 0.0001,
+        "retrieve.rerank": 1.4167,
+        "retrieve": 1.469,
+        "select_evidence": 0.0043,
+        "judge": 0.0019,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0,
+        "total": 1.4814
+      },
+      "llm_calls": 0,
+      "llm_cache_hits": 6,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 4,
+      "judge_model_calls_skipped": 1
+    },
+    {
+      "claim_id": "523",
+      "gold_label": "CONTRADICT",
+      "status": "ok",
+      "verdict": "NEI",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0003,
+        "retrieve.bm25": 0.0356,
+        "retrieve.dense": 0.0285,
+        "retrieve.fuse": 0.0001,
+        "retrieve.rerank": 1.2231,
+        "retrieve": 1.2874,
+        "select_evidence": 0.0029,
+        "judge": 0.0019,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0,
+        "total": 1.2986
+      },
+      "llm_calls": 0,
+      "llm_cache_hits": 5,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 3,
+      "judge_model_calls_skipped": 1
+    },
+    {
+      "claim_id": "550",
+      "gold_label": "NEI",
+      "status": "ok",
+      "verdict": "SUPPORT",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0004,
+        "retrieve.bm25": 0.0336,
+        "retrieve.dense": 0.0293,
+        "retrieve.fuse": 0.0001,
+        "retrieve.rerank": 0.9922,
+        "retrieve": 1.0553,
+        "select_evidence": 0.0033,
+        "judge": 0.0033,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0,
+        "total": 1.0692
+      },
+      "llm_calls": 0,
+      "llm_cache_hits": 6,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 8,
+      "judge_model_calls_skipped": 0
+    },
+    {
+      "claim_id": "696",
+      "gold_label": "NEI",
+      "status": "ok",
+      "verdict": "NEI",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0004,
+        "retrieve.bm25": 0.0231,
+        "retrieve.dense": 0.0229,
+        "retrieve.fuse": 0.0001,
+        "retrieve.rerank": 1.0069,
+        "retrieve": 1.0531,
+        "select_evidence": 0.0024,
+        "judge": 0.0009,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0,
+        "total": 1.0627
+      },
+      "llm_calls": 0,
+      "llm_cache_hits": 4,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 3,
+      "judge_model_calls_skipped": 2
+    },
+    {
+      "claim_id": "734",
+      "gold_label": "SUPPORT",
+      "status": "ok",
+      "verdict": "SUPPORT",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0003,
+        "retrieve.bm25": 0.0246,
+        "retrieve.dense": 0.0282,
+        "retrieve.fuse": 0.0001,
+        "retrieve.rerank": 1.0333,
+        "retrieve": 1.0863,
+        "select_evidence": 0.0032,
+        "judge": 0.003,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0,
+        "total": 1.0996
+      },
+      "llm_calls": 0,
+      "llm_cache_hits": 6,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 6,
+      "judge_model_calls_skipped": 0
+    }
+  ],
+  "repeat": {
+    "description": "second pass over the same claims in the same process",
+    "errors": 0,
+    "stages_seconds": {
+      "validate_input": {
+        "n": 10,
+        "mean": 0.00033999999999999997,
+        "median": 0.0003,
+        "p95": 0.0004,
+        "unit": "seconds"
+      },
+      "retrieve": {
+        "n": 10,
+        "mean": 6.000000000000001e-05,
+        "median": 0.0001,
+        "p95": 0.0001,
+        "unit": "seconds"
+      },
+      "select_evidence": {
+        "n": 10,
+        "mean": 0.00327,
+        "median": 0.00315,
+        "p95": 0.00422,
+        "unit": "seconds"
+      },
+      "judge": {
+        "n": 10,
+        "mean": 0.0019899999999999996,
+        "median": 0.0021,
+        "p95": 0.003,
+        "unit": "seconds"
+      },
+      "aggregate": {
+        "n": 10,
+        "mean": 0.0,
+        "median": 0.0,
+        "p95": 0.0,
+        "unit": "seconds"
+      },
+      "supervise": {
+        "n": 10,
+        "mean": 0.0,
+        "median": 0.0,
+        "p95": 0.0,
+        "unit": "seconds"
+      },
+      "explain": {
+        "n": 10,
+        "mean": 0.0,
+        "median": 0.0,
+        "p95": 0.0,
+        "unit": "seconds"
+      },
+      "total": {
+        "n": 10,
+        "mean": 0.012009999999999998,
+        "median": 0.012150000000000001,
+        "p95": 0.0135,
+        "unit": "seconds"
+      }
+    },
+    "cache_check": {
+      "llm_cache_hits_total": 51,
+      "retrieval_cache_hits": 10,
+      "llm_calls_total": 0
+    },
+    "claims": [
+      {
+        "claim_id": "82",
+        "gold_label": "NEI",
+        "status": "ok",
+        "verdict": "NEI",
+        "error_type": null,
+        "timings": {
+          "validate_input": 0.0004,
+          "retrieve": 0.0001,
+          "select_evidence": 0.0028,
+          "judge": 0.0012,
+          "aggregate": 0.0,
+          "supervise": 0.0,
+          "explain": 0.0,
+          "total": 0.0108
+        },
+        "llm_calls": 0,
+        "llm_cache_hits": 4,
+        "retrieval_cache_hit": true,
+        "documents_examined": 3,
+        "sentences_selected": 1,
+        "judge_model_calls_skipped": 2
+      },
+      {
+        "claim_id": "182",
+        "gold_label": "NEI",
+        "status": "ok",
+        "verdict": "SUPPORT",
+        "error_type": null,
+        "timings": {
+          "validate_input": 0.0003,
+          "retrieve": 0.0,
+          "select_evidence": 0.0029,
+          "judge": 0.003,
+          "aggregate": 0.0,
+          "supervise": 0.0,
+          "explain": 0.0,
+          "total": 0.0127
+        },
+        "llm_calls": 0,
+        "llm_cache_hits": 6,
+        "retrieval_cache_hit": true,
+        "documents_examined": 3,
+        "sentences_selected": 7,
+        "judge_model_calls_skipped": 0
+      },
+      {
+        "claim_id": "214",
+        "gold_label": "NEI",
+        "status": "ok",
+        "verdict": "SUPPORT",
+        "error_type": null,
+        "timings": {
+          "validate_input": 0.0003,
+          "retrieve": 0.0001,
+          "select_evidence": 0.0031,
+          "judge": 0.0021,
+          "aggregate": 0.0,
+          "supervise": 0.0,
+          "explain": 0.0,
+          "total": 0.0122
+        },
+        "llm_calls": 0,
+        "llm_cache_hits": 5,
+        "retrieval_cache_hit": true,
+        "documents_examined": 3,
+        "sentences_selected": 4,
+        "judge_model_calls_skipped": 1
+      },
+      {
+        "claim_id": "246",
+        "gold_label": "SUPPORT",
+        "status": "ok",
+        "verdict": "SUPPORT",
+        "error_type": null,
+        "timings": {
+          "validate_input": 0.0003,
+          "retrieve": 0.0,
+          "select_evidence": 0.0038,
+          "judge": 0.003,
+          "aggregate": 0.0,
+          "supervise": 0.0,
+          "explain": 0.0,
+          "total": 0.0135
+        },
+        "llm_calls": 0,
+        "llm_cache_hits": 6,
+        "retrieval_cache_hit": true,
+        "documents_examined": 3,
+        "sentences_selected": 5,
+        "judge_model_calls_skipped": 0
+      },
+      {
+        "claim_id": "278",
+        "gold_label": "CONTRADICT",
+        "status": "ok",
+        "verdict": "NEI",
+        "error_type": null,
+        "timings": {
+          "validate_input": 0.0003,
+          "retrieve": 0.0001,
+          "select_evidence": 0.0032,
+          "judge": 0.0001,
+          "aggregate": 0.0,
+          "supervise": 0.0,
+          "explain": 0.0,
+          "total": 0.0103
+        },
+        "llm_calls": 0,
+        "llm_cache_hits": 3,
+        "retrieval_cache_hit": true,
+        "documents_examined": 3,
+        "sentences_selected": 0,
+        "judge_model_calls_skipped": 3
+      },
+      {
+        "claim_id": "292",
+        "gold_label": "SUPPORT",
+        "status": "ok",
+        "verdict": "SUPPORT",
+        "error_type": null,
+        "timings": {
+          "validate_input": 0.0004,
+          "retrieve": 0.0001,
+          "select_evidence": 0.0044,
+          "judge": 0.0021,
+          "aggregate": 0.0,
+          "supervise": 0.0,
+          "explain": 0.0,
+          "total": 0.0135
+        },
+        "llm_calls": 0,
+        "llm_cache_hits": 6,
+        "retrieval_cache_hit": true,
+        "documents_examined": 3,
+        "sentences_selected": 4,
+        "judge_model_calls_skipped": 1
+      },
+      {
+        "claim_id": "523",
+        "gold_label": "CONTRADICT",
+        "status": "ok",
+        "verdict": "NEI",
+        "error_type": null,
+        "timings": {
+          "validate_input": 0.0004,
+          "retrieve": 0.0001,
+          "select_evidence": 0.0032,
+          "judge": 0.0021,
+          "aggregate": 0.0,
+          "supervise": 0.0,
+          "explain": 0.0,
+          "total": 0.0121
+        },
+        "llm_calls": 0,
+        "llm_cache_hits": 5,
+        "retrieval_cache_hit": true,
+        "documents_examined": 3,
+        "sentences_selected": 3,
+        "judge_model_calls_skipped": 1
+      },
+      {
+        "claim_id": "550",
+        "gold_label": "NEI",
+        "status": "ok",
+        "verdict": "SUPPORT",
+        "error_type": null,
+        "timings": {
+          "validate_input": 0.0004,
+          "retrieve": 0.0,
+          "select_evidence": 0.0027,
+          "judge": 0.0029,
+          "aggregate": 0.0,
+          "supervise": 0.0,
+          "explain": 0.0,
+          "total": 0.012
+        },
+        "llm_calls": 0,
+        "llm_cache_hits": 6,
+        "retrieval_cache_hit": true,
+        "documents_examined": 3,
+        "sentences_selected": 8,
+        "judge_model_calls_skipped": 0
+      },
+      {
+        "claim_id": "696",
+        "gold_label": "NEI",
+        "status": "ok",
+        "verdict": "NEI",
+        "error_type": null,
+        "timings": {
+          "validate_input": 0.0003,
+          "retrieve": 0.0001,
+          "select_evidence": 0.004,
+          "judge": 0.0013,
+          "aggregate": 0.0,
+          "supervise": 0.0,
+          "explain": 0.0,
+          "total": 0.0125
+        },
+        "llm_calls": 0,
+        "llm_cache_hits": 4,
+        "retrieval_cache_hit": true,
+        "documents_examined": 3,
+        "sentences_selected": 3,
+        "judge_model_calls_skipped": 2
+      },
+      {
+        "claim_id": "734",
+        "gold_label": "SUPPORT",
+        "status": "ok",
+        "verdict": "SUPPORT",
+        "error_type": null,
+        "timings": {
+          "validate_input": 0.0003,
+          "retrieve": 0.0,
+          "select_evidence": 0.0026,
+          "judge": 0.0021,
+          "aggregate": 0.0,
+          "supervise": 0.0,
+          "explain": 0.0,
+          "total": 0.0105
+        },
+        "llm_calls": 0,
+        "llm_cache_hits": 6,
+        "retrieval_cache_hit": true,
+        "documents_examined": 3,
+        "sentences_selected": 6,
+        "judge_model_calls_skipped": 0
+      }
+    ]
+  },
+  "gpu_before": [
+    {
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "utilization_pct": "0",
+      "memory_used_mib": "3944",
+      "memory_total_mib": "6141"
+    }
+  ],
+  "gpu_after": [
+    {
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "utilization_pct": "0",
+      "memory_used_mib": "3944",
+      "memory_total_mib": "6141"
+    }
+  ],
+  "environment": {
+    "python": "3.14.6",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "claim_checker": "0.1.0",
+    "torch": "2.14.1",
+    "sentence-transformers": "6.1.0",
+    "datasets": "5.1.0",
+    "langgraph": "1.2.16",
+    "ollama": "0.6.3",
+    "pydantic": "2.13.4",
+    "rank-bm25": "0.2.2",
+    "numpy": "2.5.2",
+    "scikit-learn": "1.9.0"
+  },
+  "notes": "Per-claim statistics exclude warm-up. Stage timings are wall-clock seconds of each LangGraph node; retrieve.* are sub-steps of retrieve. The judge is skipped without a model call for an abstract with no selected evidence, so judge time varies with the evidence agent's output. Measured on one laptop with a local Ollama server; other GPU work at the same time slows the model stages."
+}

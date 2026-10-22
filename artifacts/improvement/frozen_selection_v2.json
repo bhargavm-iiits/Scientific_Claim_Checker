@@ -1,0 +1,24 @@
+{
+  "selected_on": "dev_tune (120 training-derived claims)",
+  "selection_criterion": "Highest three-class Macro-F1 among the completed revised verifier checkpoints and development calibration candidates; accuracy is secondary",
+  "selected_development_checkpoint": "artifacts/models/nli_scifact_train_v2/epoch3",
+  "development_accuracy": 0.7166666666666667,
+  "development_macro_f1": 0.7159932659932661,
+  "evidence_mode": "full_abstract",
+  "k": 3,
+  "support_threshold": 0.5,
+  "contradict_threshold": 0.5,
+  "final_fit": {
+    "name": "nli_scifact_final_v2",
+    "epochs": 3,
+    "layers": 12,
+    "batch_size": 2,
+    "accumulate": 4,
+    "max_length": 512,
+    "learning_rate": 0.00001,
+    "hard_negatives": 2,
+    "seed": 42,
+    "excluded": "Every normalized public validation claim text and annotation conflicts; internal training-derived development is included only in this final refit"
+  },
+  "confirmation": "Run once on accuracy_holdout (200) and recheck historical final (100). Do not tune on these outputs."
+}

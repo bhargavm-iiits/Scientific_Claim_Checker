@@ -1,0 +1,27 @@
+{
+  "population": "unchanged original300, reused not blind",
+  "claims": 300,
+  "correct": 242,
+  "error_categories": {
+    "wrong_despite_examined_annotated_paper": 35,
+    "annotated_paper_outside_top3": 10,
+    "decisive_on_gold_NEI": 10,
+    "top3_paper_removed_before_judging": 3
+  },
+  "error_transitions": {
+    "SUPPORT->NEI": 23,
+    "CONTRADICT->NEI": 22,
+    "NEI->CONTRADICT": 5,
+    "NEI->SUPPORT": 5,
+    "SUPPORT->CONTRADICT": 3
+  },
+  "correct_required_for_strict_accuracy_above_95": 286,
+  "net_additional_correct_required": 44,
+  "sources_sha256": {
+    "artifacts\\runs\\nli_titlefamily_recheck_v1\\predictions.jsonl": "fb9d7fd91f0e32d70ddc97c09600b899f673dc9b584ab2d00d14d67cbb79f83c",
+    "artifacts\\runs\\nli_titlefamily_holdout_v1\\predictions.jsonl": "5fe81ef3e622612b3382ca72a20319673244d58038d6b3391c52f69db7a6e472"
+  },
+  "proposed_approach": "Docs/REACH_95_APPROACH.md",
+  "new_training_or_validation_run": false,
+  "limitations": "Read-only diagnostic; no labels, cases, prediction records or evaluation definitions were changed. Categories are pipeline locations, not proved causal explanations."
+}

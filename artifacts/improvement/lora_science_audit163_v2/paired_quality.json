@@ -1,0 +1,252 @@
+{
+  "stage": "audit163",
+  "claims": 163,
+  "groups": 103,
+  "metrics": {
+    "baseline": {
+      "verdict": {
+        "n_claims": 163,
+        "unit": "claims",
+        "covered": 163,
+        "coverage": 1.0,
+        "correct": 118,
+        "accuracy": 0.7239263803680982,
+        "accuracy_on_covered": 0.7239263803680982,
+        "per_class": {
+          "SUPPORT": {
+            "precision": 0.8275862068965517,
+            "recall": 0.7164179104477612,
+            "f1": 0.768,
+            "support": 67
+          },
+          "CONTRADICT": {
+            "precision": 0.7741935483870968,
+            "recall": 0.6857142857142857,
+            "f1": 0.7272727272727273,
+            "support": 35
+          },
+          "NEI": {
+            "precision": 0.6216216216216216,
+            "recall": 0.7540983606557377,
+            "f1": 0.6814814814814815,
+            "support": 61
+          }
+        },
+        "macro_f1": 0.725584736251403,
+        "macro_f1_labels": [
+          "SUPPORT",
+          "CONTRADICT",
+          "NEI"
+        ],
+        "confusion": {
+          "rows": "gold",
+          "columns": "predicted",
+          "matrix": {
+            "SUPPORT": {
+              "SUPPORT": 48,
+              "CONTRADICT": 1,
+              "NEI": 18,
+              "ERROR": 0
+            },
+            "CONTRADICT": {
+              "SUPPORT": 1,
+              "CONTRADICT": 24,
+              "NEI": 10,
+              "ERROR": 0
+            },
+            "NEI": {
+              "SUPPORT": 9,
+              "CONTRADICT": 6,
+              "NEI": 46,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "retrieval": {
+        "unit": "claims (mean of per-claim document recall)",
+        "recall@3": 0.7188139059304703,
+        "recall@3_n_claims": 163,
+        "evidence_doc_recall@3": 0.8937908496732025,
+        "evidence_doc_recall@3_n_claims": 102,
+        "recall@10": 0.8803680981595092,
+        "recall@10_n_claims": 163,
+        "evidence_doc_recall@10": 0.9656862745098039,
+        "evidence_doc_recall@10_n_claims": 102,
+        "evidence_doc_recall_examined": 0.8741830065359476,
+        "evidence_doc_recall_examined_n_claims": 102
+      },
+      "citations": {
+        "unit": "evidence sentences (micro)",
+        "claims": 163,
+        "claims_in_recall_denominator": 163,
+        "errored_claims_included": 0,
+        "errored_annotated_pairs_included": 0,
+        "errored_reference_sentences_included": 0,
+        "annotated_pairs_with_predictions": 97,
+        "true_positive_sentences": 71,
+        "predicted_sentences_in_annotated_docs": 132,
+        "predicted_sentences_in_unannotated_docs": 87,
+        "reference_sentences": 194,
+        "precision": 0.5378787878787878,
+        "precision_denominator": 132,
+        "recall": 0.36597938144329895,
+        "recall_denominator": 194,
+        "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision. Claims with an operational error count in the recall denominator with zero predicted sentences."
+      }
+    },
+    "candidate": {
+      "verdict": {
+        "n_claims": 163,
+        "unit": "claims",
+        "covered": 163,
+        "coverage": 1.0,
+        "correct": 121,
+        "accuracy": 0.7423312883435583,
+        "accuracy_on_covered": 0.7423312883435583,
+        "per_class": {
+          "SUPPORT": {
+            "precision": 0.8181818181818182,
+            "recall": 0.8059701492537313,
+            "f1": 0.8120300751879699,
+            "support": 67
+          },
+          "CONTRADICT": {
+            "precision": 0.7333333333333333,
+            "recall": 0.6285714285714286,
+            "f1": 0.676923076923077,
+            "support": 35
+          },
+          "NEI": {
+            "precision": 0.6716417910447762,
+            "recall": 0.7377049180327869,
+            "f1": 0.703125,
+            "support": 61
+          }
+        },
+        "macro_f1": 0.7306927173703489,
+        "macro_f1_labels": [
+          "SUPPORT",
+          "CONTRADICT",
+          "NEI"
+        ],
+        "confusion": {
+          "rows": "gold",
+          "columns": "predicted",
+          "matrix": {
+            "SUPPORT": {
+              "SUPPORT": 54,
+              "CONTRADICT": 1,
+              "NEI": 12,
+              "ERROR": 0
+            },
+            "CONTRADICT": {
+              "SUPPORT": 3,
+              "CONTRADICT": 22,
+              "NEI": 10,
+              "ERROR": 0
+            },
+            "NEI": {
+              "SUPPORT": 9,
+              "CONTRADICT": 7,
+              "NEI": 45,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "retrieval": {
+        "unit": "claims (mean of per-claim document recall)",
+        "recall@3": 0.7157464212678936,
+        "recall@3_n_claims": 163,
+        "evidence_doc_recall@3": 0.8888888888888888,
+        "evidence_doc_recall@3_n_claims": 102,
+        "recall@10": 0.8312883435582822,
+        "recall@10_n_claims": 163,
+        "evidence_doc_recall@10": 0.9607843137254902,
+        "evidence_doc_recall@10_n_claims": 102,
+        "evidence_doc_recall_examined": 0.9330065359477123,
+        "evidence_doc_recall_examined_n_claims": 102
+      },
+      "citations": {
+        "unit": "evidence sentences (micro)",
+        "claims": 163,
+        "claims_in_recall_denominator": 163,
+        "errored_claims_included": 0,
+        "errored_annotated_pairs_included": 0,
+        "errored_reference_sentences_included": 0,
+        "annotated_pairs_with_predictions": 97,
+        "true_positive_sentences": 118,
+        "predicted_sentences_in_annotated_docs": 466,
+        "predicted_sentences_in_unannotated_docs": 377,
+        "reference_sentences": 194,
+        "precision": 0.2532188841201717,
+        "precision_denominator": 466,
+        "recall": 0.6082474226804123,
+        "recall_denominator": 194,
+        "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision. Claims with an operational error count in the recall denominator with zero predicted sentences."
+      }
+    }
+  },
+  "baseline_only_correct": 10,
+  "candidate_only_correct": 13,
+  "paired_group_bootstrap95_difference_candidate_minus_baseline": {
+    "accuracy": [
+      -0.04255643487285943,
+      0.07831620600047252
+    ],
+    "macro_f1": [
+      -0.05922084447432901,
+      0.06988720317447927
+    ]
+  },
+  "bootstrap_draws": 10000,
+  "seed": 42,
+  "target": {
+    "scores": {
+      "accuracy": 0.7423312883435583,
+      "macro_f1": 0.7306927173703489,
+      "SUPPORT_precision": 0.8181818181818182,
+      "SUPPORT_recall": 0.8059701492537313,
+      "SUPPORT_f1": 0.8120300751879699,
+      "CONTRADICT_precision": 0.7333333333333333,
+      "CONTRADICT_recall": 0.6285714285714286,
+      "CONTRADICT_f1": 0.676923076923077,
+      "NEI_precision": 0.6716417910447762,
+      "NEI_recall": 0.7377049180327869,
+      "NEI_f1": 0.703125,
+      "evidence_precision": 0.2532188841201717,
+      "evidence_recall": 0.6082474226804123,
+      "recall@3": 0.7157464212678936,
+      "recall@10": 0.8312883435582822,
+      "quote_validity": 1.0
+    },
+    "all_above_0_95": false,
+    "primary_accuracy_and_macro_above_0_95": false
+  },
+  "scored_source_budget": {
+    "max": 20,
+    "mean": 10.404907975460123
+  },
+  "raw_predictions_sha256": "e01330e600ff4f2104fc8e6b24cf58d63d6e092e96fe3a6bcb0afd5a426c0129",
+  "baseline_predictions_sha256": {
+    "artifacts\\improvement\\polarity_audit_v1\\paired_predictions.jsonl": "46f241168a96a11abe860fd4322e261b97c4e82a76f4926c0c457e4c3991daa4"
+  },
+  "limitations": "Reused data, not blind. Group-bootstrap intervals do not correct selection. Several changes form a combined candidate. Hardware/runtime differs from saved baselines; timings are not a controlled latency comparison.",
+  "audit_gate_passed": false,
+  "gate_conditions": {
+    "accuracy_gain": false,
+    "macro_gain": false,
+    "citation_precision": false,
+    "citation_recall": true,
+    "retrieval3": false,
+    "retrieval10": false,
+    "zero_errors": true,
+    "exact_quotes": true
+  },
+  "error_categories": {
+    "wrong verdict despite retained annotated paper": 22,
+    "decisive verdict on gold NEI": 16,
+    "annotated paper scored but not retained": 4
+  }
+}

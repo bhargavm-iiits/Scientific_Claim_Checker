@@ -1,0 +1,15 @@
+{
+  "protocol_sha256": "a0e39131549a9302fa4484d77788db6454eb6b442b3dcd6d4ff75edf050c1e54",
+  "frozen_source_files": 59,
+  "frozen_source_hashes_match": true,
+  "audit_predictions_sha256": "e01330e600ff4f2104fc8e6b24cf58d63d6e092e96fe3a6bcb0afd5a426c0129",
+  "audit_claims": 163,
+  "audit_gate_passed": false,
+  "final_model_created": false,
+  "validation300_created": false,
+  "regression_tests_passed": 434,
+  "ruff": "passed",
+  "best_original300_accuracy": 0.8066666666666666,
+  "best_original300_macro_f1": 0.7959743387519879,
+  "targets_met": false
+}

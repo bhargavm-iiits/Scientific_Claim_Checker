@@ -1,0 +1,183 @@
+{
+  "population": "audit163",
+  "reused_not_blind": true,
+  "metrics": {
+    "verdict": {
+      "n_claims": 163,
+      "unit": "claims",
+      "covered": 163,
+      "coverage": 1.0,
+      "correct": 121,
+      "accuracy": 0.7423312883435583,
+      "accuracy_on_covered": 0.7423312883435583,
+      "per_class": {
+        "SUPPORT": {
+          "precision": 0.8181818181818182,
+          "recall": 0.8059701492537313,
+          "f1": 0.8120300751879699,
+          "support": 67
+        },
+        "CONTRADICT": {
+          "precision": 0.7333333333333333,
+          "recall": 0.6285714285714286,
+          "f1": 0.676923076923077,
+          "support": 35
+        },
+        "NEI": {
+          "precision": 0.6716417910447762,
+          "recall": 0.7377049180327869,
+          "f1": 0.703125,
+          "support": 61
+        }
+      },
+      "macro_f1": 0.7306927173703489,
+      "macro_f1_labels": [
+        "SUPPORT",
+        "CONTRADICT",
+        "NEI"
+      ],
+      "confusion": {
+        "rows": "gold",
+        "columns": "predicted",
+        "matrix": {
+          "SUPPORT": {
+            "SUPPORT": 54,
+            "CONTRADICT": 1,
+            "NEI": 12,
+            "ERROR": 0
+          },
+          "CONTRADICT": {
+            "SUPPORT": 3,
+            "CONTRADICT": 22,
+            "NEI": 10,
+            "ERROR": 0
+          },
+          "NEI": {
+            "SUPPORT": 9,
+            "CONTRADICT": 7,
+            "NEI": 45,
+            "ERROR": 0
+          }
+        }
+      }
+    },
+    "operational": {
+      "unit": "claims",
+      "requested": 163,
+      "ok": 163,
+      "errors": 0,
+      "operational_failure_rate": 0.0,
+      "errors_by_type": {},
+      "conflicts": 4,
+      "conflict_rate_of_ok": 0.024539877300613498,
+      "conflict_rate_of_requested": 0.024539877300613498
+    },
+    "latency_total": {
+      "n": 163,
+      "mean": 1.6424644276074083,
+      "median": 1.5043717000007746,
+      "p95": 3.104500130003726,
+      "unit": "seconds"
+    },
+    "latency_stages": {
+      "total": {
+        "n": 163,
+        "mean": 1.6424644276074083,
+        "median": 1.5043717000007746,
+        "p95": 3.104500130003726,
+        "unit": "seconds"
+      }
+    },
+    "retrieval": {
+      "unit": "claims (mean of per-claim document recall)",
+      "recall@3": 0.7157464212678936,
+      "recall@3_n_claims": 163,
+      "evidence_doc_recall@3": 0.8888888888888888,
+      "evidence_doc_recall@3_n_claims": 102,
+      "recall@10": 0.8312883435582822,
+      "recall@10_n_claims": 163,
+      "evidence_doc_recall@10": 0.9607843137254902,
+      "evidence_doc_recall@10_n_claims": 102,
+      "evidence_doc_recall_examined": 0.9330065359477123,
+      "evidence_doc_recall_examined_n_claims": 102
+    },
+    "evidence_cited": {
+      "unit": "evidence sentences (micro)",
+      "claims": 163,
+      "claims_in_recall_denominator": 163,
+      "errored_claims_included": 0,
+      "errored_annotated_pairs_included": 0,
+      "errored_reference_sentences_included": 0,
+      "annotated_pairs_with_predictions": 97,
+      "true_positive_sentences": 118,
+      "predicted_sentences_in_annotated_docs": 466,
+      "predicted_sentences_in_unannotated_docs": 377,
+      "reference_sentences": 194,
+      "precision": 0.2532188841201717,
+      "precision_denominator": 466,
+      "recall": 0.6082474226804123,
+      "recall_denominator": 194,
+      "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision. Claims with an operational error count in the recall denominator with zero predicted sentences."
+    },
+    "quotes": {
+      "unit": "quotations",
+      "quotes": 843,
+      "valid": 843,
+      "validity": 1.0
+    },
+    "downgraded_claims": 0,
+    "downgraded_claim_ids": [],
+    "cache": {
+      "llm": {
+        "unit": "model requests",
+        "model_calls": 0,
+        "cache_hits": 0,
+        "cache_hit_rate": null
+      },
+      "retrieval": {
+        "unit": "claims whose retrieval ran (one lookup each)",
+        "claims_with_retrieval": 163,
+        "cache_hits": 0,
+        "cache_misses": 0,
+        "unknown": 163,
+        "cache_hit_rate": null,
+        "unknown_with_copied_subtimings": 0,
+        "note": "A cache hit's `retrieve` time is the real near-zero lookup, so `total` latency excludes the search; its original sub-step seconds are kept in `retrieve_original_compute_s`, not in timings. Unknown = saved before the flag existed."
+      }
+    }
+  },
+  "target": {
+    "scores": {
+      "accuracy": 0.7423312883435583,
+      "macro_f1": 0.7306927173703489,
+      "SUPPORT_precision": 0.8181818181818182,
+      "SUPPORT_recall": 0.8059701492537313,
+      "SUPPORT_f1": 0.8120300751879699,
+      "CONTRADICT_precision": 0.7333333333333333,
+      "CONTRADICT_recall": 0.6285714285714286,
+      "CONTRADICT_f1": 0.676923076923077,
+      "NEI_precision": 0.6716417910447762,
+      "NEI_recall": 0.7377049180327869,
+      "NEI_f1": 0.703125,
+      "evidence_precision": 0.2532188841201717,
+      "evidence_recall": 0.6082474226804123,
+      "recall@3": 0.7157464212678936,
+      "recall@10": 0.8312883435582822,
+      "quote_validity": 1.0
+    },
+    "all_above_0_95": false,
+    "primary_accuracy_and_macro_above_0_95": false
+  },
+  "rescued_claims": 9,
+  "gate_conditions": {
+    "accuracy_gain": false,
+    "macro_gain": false,
+    "citation_precision": false,
+    "citation_recall": true,
+    "retrieval3": false,
+    "retrieval10": false,
+    "zero_errors": true,
+    "exact_quotes": true
+  },
+  "audit_gate_passed": false
+}

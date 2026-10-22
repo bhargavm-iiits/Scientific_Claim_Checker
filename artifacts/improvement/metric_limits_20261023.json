@@ -1,0 +1,21 @@
+{
+  "population": "Original unchanged validation300; aggregate structural audit only",
+  "claims": 300,
+  "gold_evidence_sentences": 366,
+  "reference_document_recall_upper_bounds": {
+    "recall@1": 0.9532777777777778,
+    "recall@3": 0.9948333333333333,
+    "recall@5": 1.0,
+    "recall@10": 1.0
+  },
+  "two_quotes_per_document_evidence_recall_upper_bound_unlimited_documents": 0.8387978142076503,
+  "evidence_recall_upper_bounds_by_document_budget_without_quote_cap": {
+    "1": 0.9207650273224044,
+    "3": 0.9836065573770492,
+    "5": 1.0,
+    "10": 1.0
+  },
+  "two_quotes_per_document_and_three_documents_evidence_recall_upper_bound": 0.8224043715846995,
+  "gold_sha256": "74ae8e562dc08caacdf62cdbb2d03bb50ddc000fb44d361d6341207a9da568e3",
+  "limitations": "Upper bounds assume perfect selection of annotated sources/sentences. These are not measured model scores. No claims, annotations or examples are exported to training or inference. Removing a structural cap does not establish achievable95percent quality."
+}

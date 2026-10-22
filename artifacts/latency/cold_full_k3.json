@@ -1,0 +1,457 @@
+{
+  "benchmark": "cold_full_pipeline",
+  "created_at": "2026-10-20T19:12:07+00:00",
+  "command": "python -m claim_checker latency --suite smoke --limit 10 --no-cache",
+  "process": "fresh Python process; one ClaimChecker (new in-process retrieval cache)",
+  "split": "smoke",
+  "claim_ids": [
+    "82",
+    "182",
+    "214",
+    "246",
+    "278",
+    "292",
+    "523",
+    "550",
+    "696",
+    "734"
+  ],
+  "n_claims": 10,
+  "configuration": {
+    "k": 3,
+    "retrieval_method": "hybrid",
+    "rerank": true,
+    "evidence_mode": "evidence",
+    "llm_disk_cache": false,
+    "model": "qwen3:4b",
+    "model_digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+    "think": false,
+    "temperature": 0.0,
+    "num_ctx": 8192,
+    "embedding_device": "cpu",
+    "index_fingerprint": "3fa9e53a7857605c"
+  },
+  "warmup_seconds": {
+    "resources": 19.9541,
+    "first_claim": 4.4433,
+    "total": 24.3975,
+    "first_claim_id": "774",
+    "first_claim_timings": {
+      "validate_input": 0.0003,
+      "retrieve.bm25": 0.0341,
+      "retrieve.dense": 0.0249,
+      "retrieve.fuse": 0.0001,
+      "retrieve.rerank": 0.7655,
+      "retrieve": 0.8248,
+      "select_evidence": 3.6052,
+      "judge": 0.0001,
+      "aggregate": 0.0,
+      "supervise": 0.0,
+      "explain": 0.0,
+      "total": 4.4426
+    },
+    "ollama_models_resident_before": [
+      {
+        "name": "qwen3:4b",
+        "size_vram": 3877571133,
+        "expires_at": "2026-10-21T01:08:50.442837+05:30"
+      }
+    ]
+  },
+  "errors": 0,
+  "stages_seconds": {
+    "validate_input": {
+      "n": 10,
+      "mean": 0.00026,
+      "median": 0.0003,
+      "p95": 0.0003,
+      "unit": "seconds"
+    },
+    "retrieve": {
+      "n": 10,
+      "mean": 1.1976200000000001,
+      "median": 1.0688,
+      "p95": 1.6017249999999996,
+      "unit": "seconds"
+    },
+    "retrieve.bm25": {
+      "n": 10,
+      "mean": 0.0213,
+      "median": 0.0217,
+      "p95": 0.026265,
+      "unit": "seconds"
+    },
+    "retrieve.dense": {
+      "n": 10,
+      "mean": 0.025390000000000003,
+      "median": 0.0254,
+      "p95": 0.028755,
+      "unit": "seconds"
+    },
+    "retrieve.fuse": {
+      "n": 10,
+      "mean": 7.000000000000001e-05,
+      "median": 0.0001,
+      "p95": 0.0001,
+      "unit": "seconds"
+    },
+    "retrieve.rerank": {
+      "n": 10,
+      "mean": 1.15067,
+      "median": 1.0211999999999999,
+      "p95": 1.5570749999999995,
+      "unit": "seconds"
+    },
+    "select_evidence": {
+      "n": 10,
+      "mean": 3.49205,
+      "median": 3.5079000000000002,
+      "p95": 3.9544749999999995,
+      "unit": "seconds"
+    },
+    "judge": {
+      "n": 10,
+      "mean": 3.22042,
+      "median": 3.491,
+      "p95": 5.432919999999999,
+      "unit": "seconds"
+    },
+    "aggregate": {
+      "n": 10,
+      "mean": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "unit": "seconds"
+    },
+    "supervise": {
+      "n": 10,
+      "mean": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "unit": "seconds"
+    },
+    "explain": {
+      "n": 10,
+      "mean": 2e-05,
+      "median": 0.0,
+      "p95": 0.0001,
+      "unit": "seconds"
+    },
+    "total": {
+      "n": 10,
+      "mean": 7.916390000000002,
+      "median": 8.41725,
+      "p95": 10.072719999999999,
+      "unit": "seconds"
+    }
+  },
+  "cache_check": {
+    "llm_cache_hits_total": 0,
+    "retrieval_cache_hits": 0,
+    "llm_calls_total": 52
+  },
+  "claims": [
+    {
+      "claim_id": "82",
+      "gold_label": "NEI",
+      "status": "ok",
+      "verdict": "NEI",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0003,
+        "retrieve.bm25": 0.0239,
+        "retrieve.dense": 0.0267,
+        "retrieve.fuse": 0.0001,
+        "retrieve.rerank": 0.9664,
+        "retrieve": 1.0173,
+        "select_evidence": 3.4347,
+        "judge": 2.0773,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0,
+        "total": 6.5344
+      },
+      "llm_calls": 4,
+      "llm_cache_hits": 0,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 1,
+      "judge_model_calls_skipped": 2
+    },
+    {
+      "claim_id": "182",
+      "gold_label": "NEI",
+      "status": "ok",
+      "verdict": "SUPPORT",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0002,
+        "retrieve.bm25": 0.0212,
+        "retrieve.dense": 0.0276,
+        "retrieve.fuse": 0.0001,
+        "retrieve.rerank": 1.0359,
+        "retrieve": 1.085,
+        "select_evidence": 3.6204,
+        "judge": 3.8534,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0001,
+        "total": 8.5655
+      },
+      "llm_calls": 6,
+      "llm_cache_hits": 0,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 7,
+      "judge_model_calls_skipped": 0
+    },
+    {
+      "claim_id": "214",
+      "gold_label": "NEI",
+      "status": "ok",
+      "verdict": "SUPPORT",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0003,
+        "retrieve.bm25": 0.0222,
+        "retrieve.dense": 0.0254,
+        "retrieve.fuse": 0.0001,
+        "retrieve.rerank": 1.7409,
+        "retrieve": 1.7887,
+        "select_evidence": 3.4551,
+        "judge": 3.1286,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0,
+        "total": 8.3794
+      },
+      "llm_calls": 5,
+      "llm_cache_hits": 0,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 4,
+      "judge_model_calls_skipped": 1
+    },
+    {
+      "claim_id": "246",
+      "gold_label": "SUPPORT",
+      "status": "ok",
+      "verdict": "SUPPORT",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0002,
+        "retrieve.bm25": 0.0155,
+        "retrieve.dense": 0.0223,
+        "retrieve.fuse": 0.0001,
+        "retrieve.rerank": 1.2689,
+        "retrieve": 1.307,
+        "select_evidence": 3.0688,
+        "judge": 4.0732,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0,
+        "total": 8.4551
+      },
+      "llm_calls": 6,
+      "llm_cache_hits": 0,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 5,
+      "judge_model_calls_skipped": 0
+    },
+    {
+      "claim_id": "278",
+      "gold_label": "CONTRADICT",
+      "status": "ok",
+      "verdict": "CONTRADICT",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0002,
+        "retrieve.bm25": 0.0159,
+        "retrieve.dense": 0.0221,
+        "retrieve.fuse": 0.0,
+        "retrieve.rerank": 0.985,
+        "retrieve": 1.0232,
+        "select_evidence": 2.8945,
+        "judge": 1.1678,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0,
+        "total": 5.091
+      },
+      "llm_calls": 4,
+      "llm_cache_hits": 0,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 1,
+      "judge_model_calls_skipped": 2
+    },
+    {
+      "claim_id": "292",
+      "gold_label": "SUPPORT",
+      "status": "ok",
+      "verdict": "SUPPORT",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0002,
+        "retrieve.bm25": 0.0156,
+        "retrieve.dense": 0.0249,
+        "retrieve.fuse": 0.0001,
+        "retrieve.rerank": 1.3324,
+        "retrieve": 1.3732,
+        "select_evidence": 4.168,
+        "judge": 1.348,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0,
+        "total": 6.8951
+      },
+      "llm_calls": 5,
+      "llm_cache_hits": 0,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 1,
+      "judge_model_calls_skipped": 2
+    },
+    {
+      "claim_id": "523",
+      "gold_label": "CONTRADICT",
+      "status": "ok",
+      "verdict": "NEI",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0003,
+        "retrieve.bm25": 0.0261,
+        "retrieve.dense": 0.0254,
+        "retrieve.fuse": 0.0,
+        "retrieve.rerank": 1.1957,
+        "retrieve": 1.2474,
+        "select_evidence": 3.5864,
+        "judge": 4.8992,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0,
+        "total": 9.7392
+      },
+      "llm_calls": 6,
+      "llm_cache_hits": 0,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 9,
+      "judge_model_calls_skipped": 0
+    },
+    {
+      "claim_id": "550",
+      "gold_label": "NEI",
+      "status": "ok",
+      "verdict": "SUPPORT",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0003,
+        "retrieve.bm25": 0.0257,
+        "retrieve.dense": 0.0261,
+        "retrieve.fuse": 0.0,
+        "retrieve.rerank": 0.9788,
+        "retrieve": 1.0308,
+        "select_evidence": 3.4384,
+        "judge": 5.8696,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0,
+        "total": 10.3456
+      },
+      "llm_calls": 6,
+      "llm_cache_hits": 0,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 5,
+      "judge_model_calls_skipped": 1
+    },
+    {
+      "claim_id": "696",
+      "gold_label": "NEI",
+      "status": "ok",
+      "verdict": "NEI",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0003,
+        "retrieve.bm25": 0.0205,
+        "retrieve.dense": 0.0237,
+        "retrieve.fuse": 0.0001,
+        "retrieve.rerank": 1.0065,
+        "retrieve": 1.051,
+        "select_evidence": 3.6935,
+        "judge": 1.5753,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0001,
+        "total": 6.3267
+      },
+      "llm_calls": 4,
+      "llm_cache_hits": 0,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 3,
+      "judge_model_calls_skipped": 2
+    },
+    {
+      "claim_id": "734",
+      "gold_label": "SUPPORT",
+      "status": "ok",
+      "verdict": "SUPPORT",
+      "error_type": null,
+      "timings": {
+        "validate_input": 0.0003,
+        "retrieve.bm25": 0.0264,
+        "retrieve.dense": 0.0297,
+        "retrieve.fuse": 0.0001,
+        "retrieve.rerank": 0.9962,
+        "retrieve": 1.0526,
+        "select_evidence": 3.5607,
+        "judge": 4.2118,
+        "aggregate": 0.0,
+        "supervise": 0.0,
+        "explain": 0.0,
+        "total": 8.8319
+      },
+      "llm_calls": 6,
+      "llm_cache_hits": 0,
+      "retrieval_cache_hit": false,
+      "documents_examined": 3,
+      "sentences_selected": 7,
+      "judge_model_calls_skipped": 0
+    }
+  ],
+  "repeat": null,
+  "gpu_before": [
+    {
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "utilization_pct": "0",
+      "memory_used_mib": "3944",
+      "memory_total_mib": "6141"
+    }
+  ],
+  "gpu_after": [
+    {
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "utilization_pct": "96",
+      "memory_used_mib": "3944",
+      "memory_total_mib": "6141"
+    }
+  ],
+  "environment": {
+    "python": "3.14.6",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "claim_checker": "0.1.0",
+    "torch": "2.14.1",
+    "sentence-transformers": "6.1.0",
+    "datasets": "5.1.0",
+    "langgraph": "1.2.16",
+    "ollama": "0.6.3",
+    "pydantic": "2.13.4",
+    "rank-bm25": "0.2.2",
+    "numpy": "2.5.2",
+    "scikit-learn": "1.9.0"
+  },
+  "notes": "Per-claim statistics exclude warm-up. Stage timings are wall-clock seconds of each LangGraph node; retrieve.* are sub-steps of retrieve. The judge is skipped without a model call for an abstract with no selected evidence, so judge time varies with the evidence agent's output. Measured on one laptop with a local Ollama server; other GPU work at the same time slows the model stages."
+}

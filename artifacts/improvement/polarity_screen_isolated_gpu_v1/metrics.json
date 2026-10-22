@@ -1,0 +1,163 @@
+{
+  "claims": 20,
+  "population": "ReusedTRAINdevelopment, notblind",
+  "reference": "Controlled comparator uses same weights and longer-hypothesis window budget; original saved best300 remains separate",
+  "control": {
+    "verdict": {
+      "n_claims": 20,
+      "unit": "claims",
+      "covered": 20,
+      "coverage": 1.0,
+      "correct": 15,
+      "accuracy": 0.75,
+      "accuracy_on_covered": 0.75,
+      "per_class": {
+        "SUPPORT": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "support": 8
+        },
+        "CONTRADICT": {
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "f1": 0.5714285714285714,
+          "support": 4
+        },
+        "NEI": {
+          "precision": 0.7777777777777778,
+          "recall": 0.875,
+          "f1": 0.8235294117647058,
+          "support": 8
+        }
+      },
+      "macro_f1": 0.7149859943977591,
+      "macro_f1_labels": [
+        "SUPPORT",
+        "CONTRADICT",
+        "NEI"
+      ],
+      "confusion": {
+        "rows": "gold",
+        "columns": "predicted",
+        "matrix": {
+          "SUPPORT": {
+            "SUPPORT": 6,
+            "CONTRADICT": 1,
+            "NEI": 1,
+            "ERROR": 0
+          },
+          "CONTRADICT": {
+            "SUPPORT": 1,
+            "CONTRADICT": 2,
+            "NEI": 1,
+            "ERROR": 0
+          },
+          "NEI": {
+            "SUPPORT": 1,
+            "CONTRADICT": 0,
+            "NEI": 7,
+            "ERROR": 0
+          }
+        }
+      }
+    },
+    "operations": {
+      "unit": "claims",
+      "requested": 20,
+      "ok": 20,
+      "errors": 0,
+      "operational_failure_rate": 0.0,
+      "errors_by_type": {},
+      "conflicts": 0,
+      "conflict_rate_of_ok": 0.0,
+      "conflict_rate_of_requested": 0.0
+    },
+    "quotes": {
+      "unit": "quotations",
+      "quotes": 20,
+      "valid": 20,
+      "validity": 1.0
+    }
+  },
+  "candidate": {
+    "verdict": {
+      "n_claims": 20,
+      "unit": "claims",
+      "covered": 20,
+      "coverage": 1.0,
+      "correct": 15,
+      "accuracy": 0.75,
+      "accuracy_on_covered": 0.75,
+      "per_class": {
+        "SUPPORT": {
+          "precision": 0.6666666666666666,
+          "recall": 0.75,
+          "f1": 0.7058823529411765,
+          "support": 8
+        },
+        "CONTRADICT": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "support": 4
+        },
+        "NEI": {
+          "precision": 0.7777777777777778,
+          "recall": 0.875,
+          "f1": 0.8235294117647058,
+          "support": 8
+        }
+      },
+      "macro_f1": 0.7320261437908497,
+      "macro_f1_labels": [
+        "SUPPORT",
+        "CONTRADICT",
+        "NEI"
+      ],
+      "confusion": {
+        "rows": "gold",
+        "columns": "predicted",
+        "matrix": {
+          "SUPPORT": {
+            "SUPPORT": 6,
+            "CONTRADICT": 0,
+            "NEI": 2,
+            "ERROR": 0
+          },
+          "CONTRADICT": {
+            "SUPPORT": 2,
+            "CONTRADICT": 2,
+            "NEI": 0,
+            "ERROR": 0
+          },
+          "NEI": {
+            "SUPPORT": 1,
+            "CONTRADICT": 0,
+            "NEI": 7,
+            "ERROR": 0
+          }
+        }
+      }
+    },
+    "operations": {
+      "unit": "claims",
+      "requested": 20,
+      "ok": 20,
+      "errors": 0,
+      "operational_failure_rate": 0.0,
+      "errors_by_type": {},
+      "conflicts": 0,
+      "conflict_rate_of_ok": 0.0,
+      "conflict_rate_of_requested": 0.0
+    },
+    "quotes": {
+      "unit": "quotations",
+      "quotes": 20,
+      "valid": 20,
+      "validity": 1.0
+    }
+  },
+  "gate_passed": true,
+  "target_met": false
+}
