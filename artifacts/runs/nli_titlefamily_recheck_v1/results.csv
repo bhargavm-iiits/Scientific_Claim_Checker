@@ -1,0 +1,2 @@
+variant,description,n_claims,coverage,accuracy,macro_f1,f1_support,f1_contradict,f1_nei,recall@3,recall@10,evidence_doc_recall_examined,evidence_precision_selected,evidence_recall_selected,evidence_precision_cited,evidence_recall_cited,quote_validity,conflict_rate,failure_rate,latency_mean_s,latency_median_s,latency_p95_s
+nli_title_full,,100,1.0,0.75,0.7437119515159442,0.8157894736842105,0.7027027027027027,0.7126436781609196,0.6758333333333334,0.8241666666666666,0.8938172043010754,,,0.5714285714285714,0.39669421487603307,1.0,0.02,0.0,1.542153,1.45315,2.287305

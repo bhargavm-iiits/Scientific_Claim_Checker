@@ -1,0 +1,26 @@
+{
+  "full_v2_nothink": {
+    "rows": "gold",
+    "columns": "predicted",
+    "matrix": {
+      "SUPPORT": {
+        "SUPPORT": 34,
+        "CONTRADICT": 4,
+        "NEI": 11,
+        "ERROR": 0
+      },
+      "CONTRADICT": {
+        "SUPPORT": 2,
+        "CONTRADICT": 12,
+        "NEI": 12,
+        "ERROR": 0
+      },
+      "NEI": {
+        "SUPPORT": 5,
+        "CONTRADICT": 5,
+        "NEI": 35,
+        "ERROR": 0
+      }
+    }
+  }
+}

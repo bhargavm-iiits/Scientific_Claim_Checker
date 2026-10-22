@@ -1,0 +1,26 @@
+{
+  "full": {
+    "rows": "gold",
+    "columns": "predicted",
+    "matrix": {
+      "SUPPORT": {
+        "SUPPORT": 48,
+        "CONTRADICT": 0,
+        "NEI": 1,
+        "ERROR": 0
+      },
+      "CONTRADICT": {
+        "SUPPORT": 13,
+        "CONTRADICT": 7,
+        "NEI": 6,
+        "ERROR": 0
+      },
+      "NEI": {
+        "SUPPORT": 18,
+        "CONTRADICT": 3,
+        "NEI": 24,
+        "ERROR": 0
+      }
+    }
+  }
+}

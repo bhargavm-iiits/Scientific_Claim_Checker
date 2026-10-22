@@ -1,0 +1,22 @@
+{
+  "scope": "New course-lab appendix only, executed in isolation without model calls; original notebook not rerun.",
+  "notebook_sha256": "4a509d826e2d6f0871fd092e586ebdafe6234a235b896191e26c3ccc75c642af",
+  "cells": [
+    {
+      "one_based_cell": 49,
+      "source_sha256": "4e9d4b90ddf5c78ff15233a6240b65bb0217edc40408468a9893d94e265f031a",
+      "stdout": "Allowed verdicts: ['SUPPORT', 'CONTRADICT', 'NEI']\nSynthetic record: {'verdict': 'NEI', 'sentence_ids': [], 'reason': 'Synthetic schema example.'}\nRejected: ValidationError\nRejected: ValueError\n",
+      "passed": true
+    },
+    {
+      "one_based_cell": 51,
+      "source_sha256": "1cc26347ee4f12c56c8e162ef82c65f6ff77f79d2da449bd6b97f09350718bd7",
+      "stdout": "TRAIN fitting claim: 0 | corpus papers: 5183\nFull-abstract BM25: ['10608397', '40212412', '825728']\nTitle BM25: ['25602549', '3743071', '14831629']\nTwo-sparse-stream RRF: ['10608397', '25602549', '3743071']\nIllustrative reference Recall@3: 0.0\n",
+      "passed": true
+    }
+  ],
+  "original_backup_preserved": true,
+  "historical_outputs_preserved": true,
+  "unaffected_historical_sources_preserved": true,
+  "nbformat_validation": "passed"
+}

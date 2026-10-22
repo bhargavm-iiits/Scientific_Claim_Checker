@@ -1,0 +1,26 @@
+{
+  "nli_oracle": {
+    "rows": "gold",
+    "columns": "predicted",
+    "matrix": {
+      "SUPPORT": {
+        "SUPPORT": 28,
+        "CONTRADICT": 3,
+        "NEI": 10,
+        "ERROR": 0
+      },
+      "CONTRADICT": {
+        "SUPPORT": 0,
+        "CONTRADICT": 15,
+        "NEI": 6,
+        "ERROR": 0
+      },
+      "NEI": {
+        "SUPPORT": 0,
+        "CONTRADICT": 0,
+        "NEI": 38,
+        "ERROR": 0
+      }
+    }
+  }
+}
