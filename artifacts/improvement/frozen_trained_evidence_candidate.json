@@ -1,0 +1,21 @@
+{
+  "selection_sha256": "9f9190cc94d373000ba4870859b048f9cd0b16363a74259a9766bff944c4aa0b",
+  "plan_sha256": "08dea5d8dedce4e2b1fc9c7cc19489a1b1c1acb725c3f04aa2f385cc79348d36",
+  "profile_sha256": "bb957bf7a71d6cfc57d91a158b053588015e8af9dd440d913398649a57812d89",
+  "development": {
+    "alpha": 1,
+    "max_sentences": 1,
+    "k": 5,
+    "retrieval_gate": -2,
+    "selector_threshold": 0.475,
+    "support_threshold": 0.98,
+    "contradict_threshold": 0.97,
+    "accuracy": 0.8416666666666667,
+    "macro_f1": 0.840411165370471
+  },
+  "selector_training_sha256": "4ef73de09cf2586d5f25e3e65c608275f99f091519499cca89a737e843c8d3e9",
+  "selector_weights_sha256": "52249c74335fbb895a9ef190a3eee15c79871b09e4df9e18d26ac54e04673acc",
+  "initial_development_gate_passed": false,
+  "confirmation_exception": "Exploratory best-candidate assessment declared before validation",
+  "validation_labels_used_for_tuning": false
+}

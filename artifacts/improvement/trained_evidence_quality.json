@@ -1,0 +1,248 @@
+{
+  "holdout": {
+    "claims": 200,
+    "predictions_sha256": "5aed934e3ce3f18ecb89e121525f7852465da439efbeda8712a021b81b69db2e",
+    "operational_errors": 0,
+    "selected": {
+      "unit": "evidence sentences (micro)",
+      "claims": 200,
+      "claims_in_recall_denominator": 200,
+      "errored_claims_included": 0,
+      "errored_annotated_pairs_included": 0,
+      "errored_reference_sentences_included": 0,
+      "annotated_pairs_with_predictions": 124,
+      "true_positive_sentences": 96,
+      "predicted_sentences_in_annotated_docs": 110,
+      "predicted_sentences_in_unannotated_docs": 135,
+      "reference_sentences": 245,
+      "precision": 0.8727272727272727,
+      "precision_denominator": 110,
+      "recall": 0.39183673469387753,
+      "recall_denominator": 245,
+      "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision. Claims with an operational error count in the recall denominator with zero predicted sentences."
+    },
+    "cited": {
+      "unit": "evidence sentences (micro)",
+      "claims": 200,
+      "claims_in_recall_denominator": 200,
+      "errored_claims_included": 0,
+      "errored_annotated_pairs_included": 0,
+      "errored_reference_sentences_included": 0,
+      "annotated_pairs_with_predictions": 124,
+      "true_positive_sentences": 85,
+      "predicted_sentences_in_annotated_docs": 93,
+      "predicted_sentences_in_unannotated_docs": 36,
+      "reference_sentences": 245,
+      "precision": 0.9139784946236559,
+      "precision_denominator": 93,
+      "recall": 0.3469387755102041,
+      "recall_denominator": 245,
+      "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision. Claims with an operational error count in the recall denominator with zero predicted sentences."
+    },
+    "quotes": {
+      "unit": "quotations",
+      "quotes": 129,
+      "valid": 129,
+      "validity": 1.0
+    }
+  },
+  "recheck": {
+    "claims": 100,
+    "predictions_sha256": "b4ee28ad0019827ba83ce2a72c7902350002f320c83e19ee3793ca6f28cb7a67",
+    "operational_errors": 0,
+    "selected": {
+      "unit": "evidence sentences (micro)",
+      "claims": 100,
+      "claims_in_recall_denominator": 100,
+      "errored_claims_included": 0,
+      "errored_annotated_pairs_included": 0,
+      "errored_reference_sentences_included": 0,
+      "annotated_pairs_with_predictions": 60,
+      "true_positive_sentences": 48,
+      "predicted_sentences_in_annotated_docs": 54,
+      "predicted_sentences_in_unannotated_docs": 76,
+      "reference_sentences": 121,
+      "precision": 0.8888888888888888,
+      "precision_denominator": 54,
+      "recall": 0.39669421487603307,
+      "recall_denominator": 121,
+      "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision. Claims with an operational error count in the recall denominator with zero predicted sentences."
+    },
+    "cited": {
+      "unit": "evidence sentences (micro)",
+      "claims": 100,
+      "claims_in_recall_denominator": 100,
+      "errored_claims_included": 0,
+      "errored_annotated_pairs_included": 0,
+      "errored_reference_sentences_included": 0,
+      "annotated_pairs_with_predictions": 60,
+      "true_positive_sentences": 38,
+      "predicted_sentences_in_annotated_docs": 41,
+      "predicted_sentences_in_unannotated_docs": 29,
+      "reference_sentences": 121,
+      "precision": 0.926829268292683,
+      "precision_denominator": 41,
+      "recall": 0.3140495867768595,
+      "recall_denominator": 121,
+      "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision. Claims with an operational error count in the recall denominator with zero predicted sentences."
+    },
+    "quotes": {
+      "unit": "quotations",
+      "quotes": 70,
+      "valid": 70,
+      "validity": 1.0
+    }
+  },
+  "oracle": {
+    "claims": 100,
+    "predictions_sha256": "ba2af9cf5bc4d297d2a55cda962b8bdb1c92bfdd2369daa375a2b7dbda5f3ce1",
+    "operational_errors": 0,
+    "selected": {
+      "unit": "evidence sentences (micro)",
+      "claims": 100,
+      "claims_in_recall_denominator": 100,
+      "errored_claims_included": 0,
+      "errored_annotated_pairs_included": 0,
+      "errored_reference_sentences_included": 0,
+      "annotated_pairs_with_predictions": 68,
+      "true_positive_sentences": 54,
+      "predicted_sentences_in_annotated_docs": 60,
+      "predicted_sentences_in_unannotated_docs": 4,
+      "reference_sentences": 121,
+      "precision": 0.9,
+      "precision_denominator": 60,
+      "recall": 0.4462809917355372,
+      "recall_denominator": 121,
+      "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision. Claims with an operational error count in the recall denominator with zero predicted sentences."
+    },
+    "cited": {
+      "unit": "evidence sentences (micro)",
+      "claims": 100,
+      "claims_in_recall_denominator": 100,
+      "errored_claims_included": 0,
+      "errored_annotated_pairs_included": 0,
+      "errored_reference_sentences_included": 0,
+      "annotated_pairs_with_predictions": 68,
+      "true_positive_sentences": 44,
+      "predicted_sentences_in_annotated_docs": 47,
+      "predicted_sentences_in_unannotated_docs": 1,
+      "reference_sentences": 121,
+      "precision": 0.9361702127659575,
+      "precision_denominator": 47,
+      "recall": 0.36363636363636365,
+      "recall_denominator": 121,
+      "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision. Claims with an operational error count in the recall denominator with zero predicted sentences."
+    },
+    "quotes": {
+      "unit": "quotations",
+      "quotes": 48,
+      "valid": 48,
+      "validity": 1.0
+    }
+  },
+  "pooled_retrieved_300": {
+    "claims": 300,
+    "verdict": {
+      "n_claims": 300,
+      "unit": "claims",
+      "covered": 300,
+      "coverage": 1.0,
+      "correct": 228,
+      "accuracy": 0.76,
+      "accuracy_on_covered": 0.76,
+      "per_class": {
+        "SUPPORT": {
+          "precision": 0.8877551020408163,
+          "recall": 0.7016129032258065,
+          "f1": 0.7837837837837838,
+          "support": 124
+        },
+        "CONTRADICT": {
+          "precision": 0.8490566037735849,
+          "recall": 0.703125,
+          "f1": 0.7692307692307693,
+          "support": 64
+        },
+        "NEI": {
+          "precision": 0.6442953020134228,
+          "recall": 0.8571428571428571,
+          "f1": 0.735632183908046,
+          "support": 112
+        }
+      },
+      "macro_f1": 0.7628822456408663,
+      "macro_f1_labels": [
+        "SUPPORT",
+        "CONTRADICT",
+        "NEI"
+      ],
+      "confusion": {
+        "rows": "gold",
+        "columns": "predicted",
+        "matrix": {
+          "SUPPORT": {
+            "SUPPORT": 87,
+            "CONTRADICT": 2,
+            "NEI": 35,
+            "ERROR": 0
+          },
+          "CONTRADICT": {
+            "SUPPORT": 1,
+            "CONTRADICT": 45,
+            "NEI": 18,
+            "ERROR": 0
+          },
+          "NEI": {
+            "SUPPORT": 10,
+            "CONTRADICT": 6,
+            "NEI": 96,
+            "ERROR": 0
+          }
+        }
+      }
+    },
+    "selected": {
+      "unit": "evidence sentences (micro)",
+      "claims": 300,
+      "claims_in_recall_denominator": 300,
+      "errored_claims_included": 0,
+      "errored_annotated_pairs_included": 0,
+      "errored_reference_sentences_included": 0,
+      "annotated_pairs_with_predictions": 184,
+      "true_positive_sentences": 144,
+      "predicted_sentences_in_annotated_docs": 164,
+      "predicted_sentences_in_unannotated_docs": 211,
+      "reference_sentences": 366,
+      "precision": 0.8780487804878049,
+      "precision_denominator": 164,
+      "recall": 0.39344262295081966,
+      "recall_denominator": 366,
+      "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision. Claims with an operational error count in the recall denominator with zero predicted sentences."
+    },
+    "cited": {
+      "unit": "evidence sentences (micro)",
+      "claims": 300,
+      "claims_in_recall_denominator": 300,
+      "errored_claims_included": 0,
+      "errored_annotated_pairs_included": 0,
+      "errored_reference_sentences_included": 0,
+      "annotated_pairs_with_predictions": 184,
+      "true_positive_sentences": 123,
+      "predicted_sentences_in_annotated_docs": 134,
+      "predicted_sentences_in_unannotated_docs": 65,
+      "reference_sentences": 366,
+      "precision": 0.917910447761194,
+      "precision_denominator": 134,
+      "recall": 0.3360655737704918,
+      "recall_denominator": 366,
+      "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision. Claims with an operational error count in the recall denominator with zero predicted sentences."
+    },
+    "quotes": {
+      "unit": "quotations",
+      "quotes": 199,
+      "valid": 199,
+      "validity": 1.0
+    }
+  },
+  "population_note": "Reused validation cohorts; oracle is separate and never pooled."
+}

@@ -1,0 +1,255 @@
+{
+  "frozen_candidate_sha256": "e88356892fcd88e4fd17fb505c8bcea9576ac8ce1681dfe404fd250175625472",
+  "subsets": [
+    {
+      "run_id": "trained_evidence_holdout_v2",
+      "metrics": {
+        "n_claims": 200,
+        "unit": "claims",
+        "covered": 200,
+        "coverage": 1.0,
+        "correct": 154,
+        "accuracy": 0.77,
+        "accuracy_on_covered": 0.77,
+        "per_class": {
+          "SUPPORT": {
+            "precision": 0.9206349206349206,
+            "recall": 0.6987951807228916,
+            "f1": 0.7945205479452054,
+            "support": 83
+          },
+          "CONTRADICT": {
+            "precision": 0.8529411764705882,
+            "recall": 0.6744186046511628,
+            "f1": 0.7532467532467533,
+            "support": 43
+          },
+          "NEI": {
+            "precision": 0.6504854368932039,
+            "recall": 0.9054054054054054,
+            "f1": 0.7570621468926554,
+            "support": 74
+          }
+        },
+        "macro_f1": 0.7682764826948714,
+        "macro_f1_labels": [
+          "SUPPORT",
+          "CONTRADICT",
+          "NEI"
+        ],
+        "confusion": {
+          "rows": "gold",
+          "columns": "predicted",
+          "matrix": {
+            "SUPPORT": {
+              "SUPPORT": 58,
+              "CONTRADICT": 2,
+              "NEI": 23,
+              "ERROR": 0
+            },
+            "CONTRADICT": {
+              "SUPPORT": 1,
+              "CONTRADICT": 29,
+              "NEI": 13,
+              "ERROR": 0
+            },
+            "NEI": {
+              "SUPPORT": 4,
+              "CONTRADICT": 3,
+              "NEI": 67,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "operational_errors": 0
+    },
+    {
+      "run_id": "trained_evidence_recheck_v2",
+      "metrics": {
+        "n_claims": 100,
+        "unit": "claims",
+        "covered": 100,
+        "coverage": 1.0,
+        "correct": 74,
+        "accuracy": 0.74,
+        "accuracy_on_covered": 0.74,
+        "per_class": {
+          "SUPPORT": {
+            "precision": 0.8285714285714286,
+            "recall": 0.7073170731707317,
+            "f1": 0.7631578947368421,
+            "support": 41
+          },
+          "CONTRADICT": {
+            "precision": 0.8421052631578947,
+            "recall": 0.7619047619047619,
+            "f1": 0.8,
+            "support": 21
+          },
+          "NEI": {
+            "precision": 0.6304347826086957,
+            "recall": 0.7631578947368421,
+            "f1": 0.6904761904761905,
+            "support": 38
+          }
+        },
+        "macro_f1": 0.7512113617376777,
+        "macro_f1_labels": [
+          "SUPPORT",
+          "CONTRADICT",
+          "NEI"
+        ],
+        "confusion": {
+          "rows": "gold",
+          "columns": "predicted",
+          "matrix": {
+            "SUPPORT": {
+              "SUPPORT": 29,
+              "CONTRADICT": 0,
+              "NEI": 12,
+              "ERROR": 0
+            },
+            "CONTRADICT": {
+              "SUPPORT": 0,
+              "CONTRADICT": 16,
+              "NEI": 5,
+              "ERROR": 0
+            },
+            "NEI": {
+              "SUPPORT": 6,
+              "CONTRADICT": 3,
+              "NEI": 29,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "operational_errors": 0
+    },
+    {
+      "run_id": "trained_evidence_oracle_v2",
+      "metrics": {
+        "n_claims": 100,
+        "unit": "claims",
+        "covered": 100,
+        "coverage": 1.0,
+        "correct": 81,
+        "accuracy": 0.81,
+        "accuracy_on_covered": 0.81,
+        "per_class": {
+          "SUPPORT": {
+            "precision": 1.0,
+            "recall": 0.7073170731707317,
+            "f1": 0.8285714285714286,
+            "support": 41
+          },
+          "CONTRADICT": {
+            "precision": 0.9375,
+            "recall": 0.7142857142857143,
+            "f1": 0.8108108108108109,
+            "support": 21
+          },
+          "NEI": {
+            "precision": 0.6727272727272727,
+            "recall": 0.9736842105263158,
+            "f1": 0.7956989247311828,
+            "support": 38
+          }
+        },
+        "macro_f1": 0.8116937213711407,
+        "macro_f1_labels": [
+          "SUPPORT",
+          "CONTRADICT",
+          "NEI"
+        ],
+        "confusion": {
+          "rows": "gold",
+          "columns": "predicted",
+          "matrix": {
+            "SUPPORT": {
+              "SUPPORT": 29,
+              "CONTRADICT": 0,
+              "NEI": 12,
+              "ERROR": 0
+            },
+            "CONTRADICT": {
+              "SUPPORT": 0,
+              "CONTRADICT": 15,
+              "NEI": 6,
+              "ERROR": 0
+            },
+            "NEI": {
+              "SUPPORT": 0,
+              "CONTRADICT": 1,
+              "NEI": 37,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "operational_errors": 0
+    }
+  ],
+  "pooled_validation_300": {
+    "n_claims": 300,
+    "unit": "claims",
+    "covered": 300,
+    "coverage": 1.0,
+    "correct": 228,
+    "accuracy": 0.76,
+    "accuracy_on_covered": 0.76,
+    "per_class": {
+      "SUPPORT": {
+        "precision": 0.8877551020408163,
+        "recall": 0.7016129032258065,
+        "f1": 0.7837837837837838,
+        "support": 124
+      },
+      "CONTRADICT": {
+        "precision": 0.8490566037735849,
+        "recall": 0.703125,
+        "f1": 0.7692307692307693,
+        "support": 64
+      },
+      "NEI": {
+        "precision": 0.6442953020134228,
+        "recall": 0.8571428571428571,
+        "f1": 0.735632183908046,
+        "support": 112
+      }
+    },
+    "macro_f1": 0.7628822456408663,
+    "macro_f1_labels": [
+      "SUPPORT",
+      "CONTRADICT",
+      "NEI"
+    ],
+    "confusion": {
+      "rows": "gold",
+      "columns": "predicted",
+      "matrix": {
+        "SUPPORT": {
+          "SUPPORT": 87,
+          "CONTRADICT": 2,
+          "NEI": 35,
+          "ERROR": 0
+        },
+        "CONTRADICT": {
+          "SUPPORT": 1,
+          "CONTRADICT": 45,
+          "NEI": 18,
+          "ERROR": 0
+        },
+        "NEI": {
+          "SUPPORT": 10,
+          "CONTRADICT": 6,
+          "NEI": 96,
+          "ERROR": 0
+        }
+      }
+    }
+  },
+  "population_note": "Reused validation cohorts; not a new blind test",
+  "target_met": false
+}

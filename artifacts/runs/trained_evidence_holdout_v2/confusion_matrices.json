@@ -1,0 +1,26 @@
+{
+  "trained_evidence": {
+    "rows": "gold",
+    "columns": "predicted",
+    "matrix": {
+      "SUPPORT": {
+        "SUPPORT": 58,
+        "CONTRADICT": 2,
+        "NEI": 23,
+        "ERROR": 0
+      },
+      "CONTRADICT": {
+        "SUPPORT": 1,
+        "CONTRADICT": 29,
+        "NEI": 13,
+        "ERROR": 0
+      },
+      "NEI": {
+        "SUPPORT": 4,
+        "CONTRADICT": 3,
+        "NEI": 67,
+        "ERROR": 0
+      }
+    }
+  }
+}

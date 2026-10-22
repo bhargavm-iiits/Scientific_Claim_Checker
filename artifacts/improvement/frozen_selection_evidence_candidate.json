@@ -1,0 +1,29 @@
+{
+  "plan_sha256": "d4f394c3a815f7294be966e0567a02c47705b9fde587cbd24c1b5160f6eec8d5",
+  "selection_sha256": "9f9190cc94d373000ba4870859b048f9cd0b16363a74259a9766bff944c4aa0b",
+  "profile_sha256": "8bb36d6a8e7d25223d0b8535d7cabc56fa365ec27379c0aaa04cd46f627b7fba",
+  "development": {
+    "alpha": 1,
+    "max_sentences": 1,
+    "k": 5,
+    "retrieval_gate": -2,
+    "selector_threshold": 0.475,
+    "support_threshold": 0.98,
+    "contradict_threshold": 0.97,
+    "accuracy": 0.8416666666666667,
+    "macro_f1": 0.840411165370471
+  },
+  "contracts": {
+    "reader": {
+      "manifest_sha256": "88cc717f5b16e285cae71810503711d90f0d5858778f9e661590b13f71cd38c4",
+      "weights_sha256": "37ec9d414d82188543815463770880d4005d1eb8763b47b30a1c2fe9505fea7e"
+    },
+    "selector": {
+      "manifest_sha256": "c1d201d3844af25a0d0a0bf62335255e81e62f433921954918d38643c2b5ef6a",
+      "weights_sha256": "169de153ad8f73ed57bf521669ef6101e9c4604cd42e8a69353de693d4844463"
+    }
+  },
+  "validation_aggregate_informed_followup_choice": true,
+  "fresh_blind_test": false,
+  "validation_examples_used_for_inference_or_training": false
+}
