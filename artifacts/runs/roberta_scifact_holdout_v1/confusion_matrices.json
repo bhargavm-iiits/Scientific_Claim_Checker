@@ -1,0 +1,26 @@
+{
+  "nli_title_full": {
+    "rows": "gold",
+    "columns": "predicted",
+    "matrix": {
+      "SUPPORT": {
+        "SUPPORT": 67,
+        "CONTRADICT": 4,
+        "NEI": 12,
+        "ERROR": 0
+      },
+      "CONTRADICT": {
+        "SUPPORT": 5,
+        "CONTRADICT": 23,
+        "NEI": 15,
+        "ERROR": 0
+      },
+      "NEI": {
+        "SUPPORT": 19,
+        "CONTRADICT": 8,
+        "NEI": 47,
+        "ERROR": 0
+      }
+    }
+  }
+}

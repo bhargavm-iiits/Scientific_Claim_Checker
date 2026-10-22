@@ -1,0 +1,231 @@
+{
+  "run_id": "roberta_scifact_oracle_v1",
+  "identity": {
+    "suite": "title_oracle",
+    "split": "final",
+    "population_ids_sha256": "0c63aa4aee6acf2e4ffddb757dc26d890aa08c52f56dc3fb9f364c2eb6d0d8a4",
+    "population_size": 100,
+    "data": {
+      "corpus_sha256": "eb73cccad21f90053debc0500484616413e28933e693466498f10e2983dc41d4",
+      "gold_sha256": "74ae8e562dc08caacdf62cdbb2d03bb50ddc000fb44d361d6341207a9da568e3"
+    },
+    "split_fingerprint": "f2f7615e790aec4c587d3f8bd77a6ce76c4281cd68e3d637f9d5f56c45c757bb",
+    "index_fingerprint": null,
+    "model": {
+      "name": "Scientific NLI verifier",
+      "digest": "483ab906b890ceacd52fa90f143f53ab8736a9f394616cea0ad2184d414c74f5"
+    },
+    "prompt_hashes": {
+      "evidence": "25376c48b37ac36e",
+      "judge": "ae8f024d7631b2f1",
+      "judge_only": "dc2ea4990866fadd",
+      "retrieve_judge": "2ea3577c957ee917"
+    },
+    "config_fingerprint": "701ade57778e8d20cdf75e23fa026d423281b797cb1ae54bbcf6052da445ed00",
+    "verifier_config": {
+      "model_dir": "artifacts\\models\\roberta_scifact_final_v1\\epoch1",
+      "device": "cuda",
+      "threshold": 0.5,
+      "support_threshold": 0.5,
+      "contradict_threshold": 0.5,
+      "include_title": true,
+      "window_overlap": 2,
+      "min_retrieval_score": -2.0
+    },
+    "verifier_weights_sha256": "483ab906b890ceacd52fa90f143f53ab8736a9f394616cea0ad2184d414c74f5",
+    "verifier_tokenizer_sha256": "86534dd06c7b894f01a6d328613ae7db70640dc74b79a636b949bdc4c14b75f5",
+    "verifier_model_config_sha256": "138fe10870025354db2df6a28a86a14e186dd56fbee955b88b4310f5ebd62753",
+    "verifier_training_manifest_sha256": "996bc64481ba15c993993034e364d79f057912a255576586cf72701b0c79dd02",
+    "verifier_code_sha256": {
+      "agents/judge_nli.py": "6a07995cfa04c074b0c0d5110901be4c439f472cc604915eb840221a1a7a25d9",
+      "models/verifier.py": "aa1f956ec6128c7bce5858d8d27fdd2f3511d64a55debdc53064257530f3b1d6",
+      "data/verifier_context.py": "481fd40fb238d5786e1da6623928098bbf23355dd980f03214004c40c65e1278",
+      "pipeline/aggregate.py": "93e6c06a1eb059ac0a44a8347d1719a8eceb489d1c0b5e67cdaff9aa9849ff56",
+      "pipeline/graph.py": "fc092d0dd60843d067571a6d1f49fb829de6c407d9733f71f31a3bc550cb6521",
+      "agents/explainer.py": "1da537fab4f12c3ae8ea4603a393805f38fa4e65aa78af838f184e6c6eef4461"
+    }
+  },
+  "metrics": {
+    "nli_title_oracle": {
+      "verdict": {
+        "n_claims": 100,
+        "unit": "claims",
+        "covered": 100,
+        "coverage": 1.0,
+        "correct": 83,
+        "accuracy": 0.83,
+        "accuracy_on_covered": 0.83,
+        "per_class": {
+          "SUPPORT": {
+            "precision": 0.8717948717948718,
+            "recall": 0.8292682926829268,
+            "f1": 0.85,
+            "support": 41
+          },
+          "CONTRADICT": {
+            "precision": 0.8421052631578947,
+            "recall": 0.7619047619047619,
+            "f1": 0.8,
+            "support": 21
+          },
+          "NEI": {
+            "precision": 0.7857142857142857,
+            "recall": 0.868421052631579,
+            "f1": 0.825,
+            "support": 38
+          }
+        },
+        "macro_f1": 0.8249999999999998,
+        "macro_f1_labels": [
+          "SUPPORT",
+          "CONTRADICT",
+          "NEI"
+        ],
+        "confusion": {
+          "rows": "gold",
+          "columns": "predicted",
+          "matrix": {
+            "SUPPORT": {
+              "SUPPORT": 34,
+              "CONTRADICT": 2,
+              "NEI": 5,
+              "ERROR": 0
+            },
+            "CONTRADICT": {
+              "SUPPORT": 1,
+              "CONTRADICT": 16,
+              "NEI": 4,
+              "ERROR": 0
+            },
+            "NEI": {
+              "SUPPORT": 4,
+              "CONTRADICT": 1,
+              "NEI": 33,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "operational": {
+        "unit": "claims",
+        "requested": 100,
+        "ok": 100,
+        "errors": 0,
+        "operational_failure_rate": 0.0,
+        "errors_by_type": {},
+        "conflicts": 3,
+        "conflict_rate_of_ok": 0.03,
+        "conflict_rate_of_requested": 0.03
+      },
+      "latency_total": {
+        "n": 100,
+        "mean": 0.152538,
+        "median": 0.13025,
+        "p95": 0.36142999999999986,
+        "unit": "seconds"
+      },
+      "latency_stages": {
+        "aggregate": {
+          "n": 100,
+          "mean": 0.0,
+          "median": 0.0,
+          "p95": 0.0,
+          "unit": "seconds"
+        },
+        "explain": {
+          "n": 100,
+          "mean": 1.8e-05,
+          "median": 0.0,
+          "p95": 0.0001,
+          "unit": "seconds"
+        },
+        "judge": {
+          "n": 100,
+          "mean": 0.144306,
+          "median": 0.12204999999999999,
+          "p95": 0.35313499999999987,
+          "unit": "seconds"
+        },
+        "retrieve": {
+          "n": 100,
+          "mean": 9.499999999999998e-05,
+          "median": 0.0001,
+          "p95": 0.0001,
+          "unit": "seconds"
+        },
+        "select_evidence": {
+          "n": 100,
+          "mean": 2e-06,
+          "median": 0.0,
+          "p95": 0.0,
+          "unit": "seconds"
+        },
+        "supervise": {
+          "n": 100,
+          "mean": 0.0,
+          "median": 0.0,
+          "p95": 0.0,
+          "unit": "seconds"
+        },
+        "total": {
+          "n": 100,
+          "mean": 0.152538,
+          "median": 0.13025,
+          "p95": 0.36142999999999986,
+          "unit": "seconds"
+        },
+        "validate_input": {
+          "n": 100,
+          "mean": 0.000341,
+          "median": 0.0003,
+          "p95": 0.0005,
+          "unit": "seconds"
+        }
+      },
+      "evidence_cited": {
+        "unit": "evidence sentences (micro)",
+        "claims": 100,
+        "claims_in_recall_denominator": 100,
+        "errored_claims_included": 0,
+        "errored_annotated_pairs_included": 0,
+        "errored_reference_sentences_included": 0,
+        "annotated_pairs_with_predictions": 68,
+        "true_positive_sentences": 57,
+        "predicted_sentences_in_annotated_docs": 114,
+        "predicted_sentences_in_unannotated_docs": 20,
+        "reference_sentences": 121,
+        "precision": 0.5,
+        "precision_denominator": 114,
+        "recall": 0.47107438016528924,
+        "recall_denominator": 121,
+        "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision. Claims with an operational error count in the recall denominator with zero predicted sentences."
+      },
+      "quotes": {
+        "unit": "quotations",
+        "quotes": 134,
+        "valid": 134,
+        "validity": 1.0
+      },
+      "downgraded_claims": 0,
+      "downgraded_claim_ids": [],
+      "cache": {
+        "llm": {
+          "unit": "model requests",
+          "model_calls": 0,
+          "cache_hits": 0,
+          "cache_hit_rate": null
+        },
+        "retrieval": {
+          "unit": "claims whose retrieval ran (one lookup each)",
+          "claims_with_retrieval": 0,
+          "cache_hits": 0,
+          "cache_misses": 0,
+          "unknown": 0,
+          "cache_hit_rate": null,
+          "unknown_with_copied_subtimings": 0,
+          "note": "A cache hit's `retrieve` time is the real near-zero lookup, so `total` latency excludes the search; its original sub-step seconds are kept in `retrieve_original_compute_s`, not in timings. Unknown = saved before the flag existed."
+        }
+      }
+    }
+  }
+}

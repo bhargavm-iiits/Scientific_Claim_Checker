@@ -1,0 +1,268 @@
+{
+  "run_id": "verifier_recheck_v2",
+  "identity": {
+    "suite": "verifier_recheck",
+    "split": "final",
+    "population_ids_sha256": "0c63aa4aee6acf2e4ffddb757dc26d890aa08c52f56dc3fb9f364c2eb6d0d8a4",
+    "population_size": 100,
+    "data": {
+      "corpus_sha256": "eb73cccad21f90053debc0500484616413e28933e693466498f10e2983dc41d4",
+      "gold_sha256": "74ae8e562dc08caacdf62cdbb2d03bb50ddc000fb44d361d6341207a9da568e3"
+    },
+    "split_fingerprint": "f2f7615e790aec4c587d3f8bd77a6ce76c4281cd68e3d637f9d5f56c45c757bb",
+    "index_fingerprint": "3fa9e53a7857605c",
+    "model": {
+      "name": "qwen3:4b",
+      "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7"
+    },
+    "prompt_hashes": {
+      "evidence": "25376c48b37ac36e",
+      "judge": "ae8f024d7631b2f1",
+      "judge_only": "dc2ea4990866fadd",
+      "retrieve_judge": "2ea3577c957ee917"
+    },
+    "config_fingerprint": "701ade57778e8d20cdf75e23fa026d423281b797cb1ae54bbcf6052da445ed00",
+    "verifier_config": {
+      "model_dir": "artifacts/models/nli_scifact_final_v2/epoch3",
+      "device": "cuda",
+      "threshold": 0.5,
+      "support_threshold": 0.5,
+      "contradict_threshold": 0.5
+    },
+    "verifier_weights_sha256": "28f4ebb3f077f8c7e1ca4f83a48b69a85e07f33d3b130a1233121114b92ab24c",
+    "verifier_tokenizer_sha256": "ac36b2fe5ede529b5cc2f74914ee03ffb801045f70704a3e2b661d86d999116e",
+    "verifier_model_config_sha256": "29e6444e9193233f7e8d481178833d44b8e14b4470fdc4c1ac64f03326796877",
+    "verifier_training_manifest_sha256": "b2bfd99712274a7ac35efa4847f7f4b9f4c27f8f7b139bec42128777d0b82ac5",
+    "verifier_code_sha256": {
+      "agents/judge_nli.py": "4e77d7fdb202175d52ff950e3a592751dcd95369a71cbd43cb6c0da67da75a96",
+      "models/verifier.py": "330802d60768c7e38bcbef312a29702d38f522874caeefb917147d8539748b79",
+      "pipeline/aggregate.py": "93e6c06a1eb059ac0a44a8347d1719a8eceb489d1c0b5e67cdaff9aa9849ff56",
+      "pipeline/graph.py": "4a5c5cedc8c5667d9e3f156d78a6e2162fba507139faee840b5fd915ae1f7402",
+      "agents/explainer.py": "b11cf3385e70bac66f25f63551670e98845fe6b6de9de7a365e50228effa25ce"
+    }
+  },
+  "metrics": {
+    "nli_full": {
+      "verdict": {
+        "n_claims": 100,
+        "unit": "claims",
+        "covered": 100,
+        "coverage": 1.0,
+        "correct": 78,
+        "accuracy": 0.78,
+        "accuracy_on_covered": 0.78,
+        "per_class": {
+          "SUPPORT": {
+            "precision": 0.8205128205128205,
+            "recall": 0.7804878048780488,
+            "f1": 0.8,
+            "support": 41
+          },
+          "CONTRADICT": {
+            "precision": 0.8421052631578947,
+            "recall": 0.7619047619047619,
+            "f1": 0.8,
+            "support": 21
+          },
+          "NEI": {
+            "precision": 0.7142857142857143,
+            "recall": 0.7894736842105263,
+            "f1": 0.75,
+            "support": 38
+          }
+        },
+        "macro_f1": 0.7833333333333333,
+        "macro_f1_labels": [
+          "SUPPORT",
+          "CONTRADICT",
+          "NEI"
+        ],
+        "confusion": {
+          "rows": "gold",
+          "columns": "predicted",
+          "matrix": {
+            "SUPPORT": {
+              "SUPPORT": 32,
+              "CONTRADICT": 0,
+              "NEI": 9,
+              "ERROR": 0
+            },
+            "CONTRADICT": {
+              "SUPPORT": 2,
+              "CONTRADICT": 16,
+              "NEI": 3,
+              "ERROR": 0
+            },
+            "NEI": {
+              "SUPPORT": 5,
+              "CONTRADICT": 3,
+              "NEI": 30,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "operational": {
+        "unit": "claims",
+        "requested": 100,
+        "ok": 100,
+        "errors": 0,
+        "operational_failure_rate": 0.0,
+        "errors_by_type": {},
+        "conflicts": 2,
+        "conflict_rate_of_ok": 0.02,
+        "conflict_rate_of_requested": 0.02
+      },
+      "latency_total": {
+        "n": 100,
+        "mean": 1.4191259999999999,
+        "median": 1.3233,
+        "p95": 1.96572,
+        "unit": "seconds"
+      },
+      "latency_stages": {
+        "aggregate": {
+          "n": 100,
+          "mean": 0.0,
+          "median": 0.0,
+          "p95": 0.0,
+          "unit": "seconds"
+        },
+        "explain": {
+          "n": 100,
+          "mean": 1e-06,
+          "median": 0.0,
+          "p95": 0.0,
+          "unit": "seconds"
+        },
+        "judge": {
+          "n": 100,
+          "mean": 0.17630200000000001,
+          "median": 0.1482,
+          "p95": 0.37703,
+          "unit": "seconds"
+        },
+        "retrieve": {
+          "n": 100,
+          "mean": 1.2379,
+          "median": 1.1606,
+          "p95": 1.7033299999999998,
+          "unit": "seconds"
+        },
+        "retrieve.bm25": {
+          "n": 100,
+          "mean": 0.018281999999999996,
+          "median": 0.017349999999999997,
+          "p95": 0.0286,
+          "unit": "seconds"
+        },
+        "retrieve.dense": {
+          "n": 100,
+          "mean": 0.022767,
+          "median": 0.022600000000000002,
+          "p95": 0.027614999999999997,
+          "unit": "seconds"
+        },
+        "retrieve.fuse": {
+          "n": 100,
+          "mean": 5.900000000000002e-05,
+          "median": 0.0001,
+          "p95": 0.0001,
+          "unit": "seconds"
+        },
+        "retrieve.rerank": {
+          "n": 100,
+          "mean": 1.196655,
+          "median": 1.1226500000000001,
+          "p95": 1.667525,
+          "unit": "seconds"
+        },
+        "select_evidence": {
+          "n": 100,
+          "mean": 0.0,
+          "median": 0.0,
+          "p95": 0.0,
+          "unit": "seconds"
+        },
+        "supervise": {
+          "n": 100,
+          "mean": 0.0,
+          "median": 0.0,
+          "p95": 0.0,
+          "unit": "seconds"
+        },
+        "total": {
+          "n": 100,
+          "mean": 1.4191259999999999,
+          "median": 1.3233,
+          "p95": 1.96572,
+          "unit": "seconds"
+        },
+        "validate_input": {
+          "n": 100,
+          "mean": 0.00021899999999999998,
+          "median": 0.0002,
+          "p95": 0.0003,
+          "unit": "seconds"
+        }
+      },
+      "retrieval": {
+        "unit": "claims (mean of per-claim document recall)",
+        "recall@3": 0.6758333333333334,
+        "recall@3_n_claims": 100,
+        "evidence_doc_recall@3": 0.9099462365591399,
+        "evidence_doc_recall@3_n_claims": 62,
+        "recall@10": 0.8241666666666666,
+        "recall@10_n_claims": 100,
+        "evidence_doc_recall@10": 0.9422043010752689,
+        "evidence_doc_recall@10_n_claims": 62,
+        "evidence_doc_recall_examined": 0.9099462365591399,
+        "evidence_doc_recall_examined_n_claims": 62
+      },
+      "evidence_cited": {
+        "unit": "evidence sentences (micro)",
+        "claims": 100,
+        "claims_in_recall_denominator": 100,
+        "errored_claims_included": 0,
+        "errored_annotated_pairs_included": 0,
+        "errored_reference_sentences_included": 0,
+        "annotated_pairs_with_predictions": 59,
+        "true_positive_sentences": 60,
+        "predicted_sentences_in_annotated_docs": 92,
+        "predicted_sentences_in_unannotated_docs": 60,
+        "reference_sentences": 121,
+        "precision": 0.6521739130434783,
+        "precision_denominator": 92,
+        "recall": 0.49586776859504134,
+        "recall_denominator": 121,
+        "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision. Claims with an operational error count in the recall denominator with zero predicted sentences."
+      },
+      "quotes": {
+        "unit": "quotations",
+        "quotes": 152,
+        "valid": 152,
+        "validity": 1.0
+      },
+      "downgraded_claims": 0,
+      "downgraded_claim_ids": [],
+      "cache": {
+        "llm": {
+          "unit": "model requests",
+          "model_calls": 0,
+          "cache_hits": 0,
+          "cache_hit_rate": null
+        },
+        "retrieval": {
+          "unit": "claims whose retrieval ran (one lookup each)",
+          "claims_with_retrieval": 100,
+          "cache_hits": 0,
+          "cache_misses": 100,
+          "unknown": 0,
+          "cache_hit_rate": 0.0,
+          "unknown_with_copied_subtimings": 0,
+          "note": "A cache hit's `retrieve` time is the real near-zero lookup, so `total` latency excludes the search; its original sub-step seconds are kept in `retrieve_original_compute_s`, not in timings. Unknown = saved before the flag existed."
+        }
+      }
+    }
+  }
+}

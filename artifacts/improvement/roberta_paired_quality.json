@@ -1,0 +1,188 @@
+{
+  "claims": 300,
+  "population": "Unchanged reused SciFactvalidation300; pairedcomparison,notblind",
+  "baseline": {
+    "n_claims": 300,
+    "unit": "claims",
+    "covered": 300,
+    "coverage": 1.0,
+    "correct": 242,
+    "accuracy": 0.8066666666666666,
+    "accuracy_on_covered": 0.8066666666666666,
+    "per_class": {
+      "SUPPORT": {
+        "precision": 0.9514563106796117,
+        "recall": 0.7903225806451613,
+        "f1": 0.8634361233480177,
+        "support": 124
+      },
+      "CONTRADICT": {
+        "precision": 0.84,
+        "recall": 0.65625,
+        "f1": 0.7368421052631579,
+        "support": 64
+      },
+      "NEI": {
+        "precision": 0.6938775510204082,
+        "recall": 0.9107142857142857,
+        "f1": 0.7876447876447876,
+        "support": 112
+      }
+    },
+    "macro_f1": 0.7959743387519879,
+    "macro_f1_labels": [
+      "SUPPORT",
+      "CONTRADICT",
+      "NEI"
+    ],
+    "confusion": {
+      "rows": "gold",
+      "columns": "predicted",
+      "matrix": {
+        "SUPPORT": {
+          "SUPPORT": 98,
+          "CONTRADICT": 3,
+          "NEI": 23,
+          "ERROR": 0
+        },
+        "CONTRADICT": {
+          "SUPPORT": 0,
+          "CONTRADICT": 42,
+          "NEI": 22,
+          "ERROR": 0
+        },
+        "NEI": {
+          "SUPPORT": 5,
+          "CONTRADICT": 5,
+          "NEI": 102,
+          "ERROR": 0
+        }
+      }
+    }
+  },
+  "candidate": {
+    "n_claims": 300,
+    "unit": "claims",
+    "covered": 300,
+    "coverage": 1.0,
+    "correct": 210,
+    "accuracy": 0.7,
+    "accuracy_on_covered": 0.7,
+    "per_class": {
+      "SUPPORT": {
+        "precision": 0.7443609022556391,
+        "recall": 0.7983870967741935,
+        "f1": 0.7704280155642024,
+        "support": 124
+      },
+      "CONTRADICT": {
+        "precision": 0.6909090909090909,
+        "recall": 0.59375,
+        "f1": 0.6386554621848739,
+        "support": 64
+      },
+      "NEI": {
+        "precision": 0.6517857142857143,
+        "recall": 0.6517857142857143,
+        "f1": 0.6517857142857143,
+        "support": 112
+      }
+    },
+    "macro_f1": 0.6869563973449302,
+    "macro_f1_labels": [
+      "SUPPORT",
+      "CONTRADICT",
+      "NEI"
+    ],
+    "confusion": {
+      "rows": "gold",
+      "columns": "predicted",
+      "matrix": {
+        "SUPPORT": {
+          "SUPPORT": 99,
+          "CONTRADICT": 6,
+          "NEI": 19,
+          "ERROR": 0
+        },
+        "CONTRADICT": {
+          "SUPPORT": 6,
+          "CONTRADICT": 38,
+          "NEI": 20,
+          "ERROR": 0
+        },
+        "NEI": {
+          "SUPPORT": 28,
+          "CONTRADICT": 11,
+          "NEI": 73,
+          "ERROR": 0
+        }
+      }
+    }
+  },
+  "only_baseline_correct": 55,
+  "only_candidate_correct": 23,
+  "mcnemar_exact_p": 0.00037779201420676267,
+  "bootstrap": {
+    "n_boot": 10000,
+    "seed": 42,
+    "method": "percentile, paired resampling of claims",
+    "accuracy_a": [
+      0.76,
+      0.85
+    ],
+    "accuracy_b": [
+      0.6466666666666666,
+      0.7533333333333333
+    ],
+    "accuracy_diff_b_minus_a": [
+      -0.16333333333333333,
+      -0.050000000000000044
+    ],
+    "macro_f1_a": [
+      0.7457261414273036,
+      0.8421143196412018
+    ],
+    "macro_f1_b": [
+      0.629375939971636,
+      0.7402636699874127
+    ],
+    "macro_f1_diff_b_minus_a": [
+      -0.1675435193999127,
+      -0.05143813729296323
+    ],
+    "p_accuracy_diff_le_0": 0.9999,
+    "p_macro_f1_diff_le_0": 0.9999
+  },
+  "operational_errors": 0,
+  "citations": {
+    "unit": "evidence sentences (micro)",
+    "claims": 300,
+    "claims_in_recall_denominator": 300,
+    "errored_claims_included": 0,
+    "errored_annotated_pairs_included": 0,
+    "errored_reference_sentences_included": 0,
+    "annotated_pairs_with_predictions": 174,
+    "true_positive_sentences": 140,
+    "predicted_sentences_in_annotated_docs": 292,
+    "predicted_sentences_in_unannotated_docs": 278,
+    "reference_sentences": 366,
+    "precision": 0.4794520547945205,
+    "precision_denominator": 292,
+    "recall": 0.3825136612021858,
+    "recall_denominator": 366,
+    "note": "Unannotated documents are not proven irrelevant; their selections are excluded from precision. Claims with an operational error count in the recall denominator with zero predicted sentences."
+  },
+  "quotes": {
+    "unit": "quotations",
+    "quotes": 570,
+    "valid": 570,
+    "validity": 1.0
+  },
+  "prediction_hashes": {
+    "nli_titlefamily_recheck_v1": "fb9d7fd91f0e32d70ddc97c09600b899f673dc9b584ab2d00d14d67cbb79f83c",
+    "nli_titlefamily_holdout_v1": "5fe81ef3e622612b3382ca72a20319673244d58038d6b3391c52f69db7a6e472",
+    "roberta_scifact_recheck_v1": "d94c4f55d8a00b8b4ced235e678987f9f5ddf70a22cb88d3065c7aac2291c701",
+    "roberta_scifact_holdout_v1": "bcc7697899dc7ee19038985c123f3a0bded17f61ff0d266415e5dd4b0769849b"
+  },
+  "target_met": false
+}

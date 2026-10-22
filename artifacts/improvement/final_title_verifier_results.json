@@ -1,0 +1,262 @@
+{
+  "selection_sha256": "80c48b1728236e6821a2eef81c3c45a74d5ef0e942654982ef9f51f46c191893",
+  "config_sha256": "2be517154d96aa702fd8ca95419417ba7192bfb1370dbdb93e39824e046cc97d",
+  "subsets": [
+    {
+      "suite": "title_holdout",
+      "run_id": "nli_titlefamily_holdout_v1",
+      "metrics": {
+        "n_claims": 200,
+        "unit": "claims",
+        "covered": 200,
+        "coverage": 1.0,
+        "correct": 167,
+        "accuracy": 0.835,
+        "accuracy_on_covered": 0.835,
+        "per_class": {
+          "SUPPORT": {
+            "precision": 0.9852941176470589,
+            "recall": 0.8072289156626506,
+            "f1": 0.8874172185430463,
+            "support": 83
+          },
+          "CONTRADICT": {
+            "precision": 0.8529411764705882,
+            "recall": 0.6744186046511628,
+            "f1": 0.7532467532467533,
+            "support": 43
+          },
+          "NEI": {
+            "precision": 0.7244897959183674,
+            "recall": 0.9594594594594594,
+            "f1": 0.8255813953488372,
+            "support": 74
+          }
+        },
+        "macro_f1": 0.8220817890462123,
+        "macro_f1_labels": [
+          "SUPPORT",
+          "CONTRADICT",
+          "NEI"
+        ],
+        "confusion": {
+          "rows": "gold",
+          "columns": "predicted",
+          "matrix": {
+            "SUPPORT": {
+              "SUPPORT": 67,
+              "CONTRADICT": 3,
+              "NEI": 13,
+              "ERROR": 0
+            },
+            "CONTRADICT": {
+              "SUPPORT": 0,
+              "CONTRADICT": 29,
+              "NEI": 14,
+              "ERROR": 0
+            },
+            "NEI": {
+              "SUPPORT": 1,
+              "CONTRADICT": 2,
+              "NEI": 71,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "operational_errors": 0,
+      "target_met": false
+    },
+    {
+      "suite": "title_recheck",
+      "run_id": "nli_titlefamily_recheck_v1",
+      "metrics": {
+        "n_claims": 100,
+        "unit": "claims",
+        "covered": 100,
+        "coverage": 1.0,
+        "correct": 75,
+        "accuracy": 0.75,
+        "accuracy_on_covered": 0.75,
+        "per_class": {
+          "SUPPORT": {
+            "precision": 0.8857142857142857,
+            "recall": 0.7560975609756098,
+            "f1": 0.8157894736842105,
+            "support": 41
+          },
+          "CONTRADICT": {
+            "precision": 0.8125,
+            "recall": 0.6190476190476191,
+            "f1": 0.7027027027027027,
+            "support": 21
+          },
+          "NEI": {
+            "precision": 0.6326530612244898,
+            "recall": 0.8157894736842105,
+            "f1": 0.7126436781609196,
+            "support": 38
+          }
+        },
+        "macro_f1": 0.7437119515159442,
+        "macro_f1_labels": [
+          "SUPPORT",
+          "CONTRADICT",
+          "NEI"
+        ],
+        "confusion": {
+          "rows": "gold",
+          "columns": "predicted",
+          "matrix": {
+            "SUPPORT": {
+              "SUPPORT": 31,
+              "CONTRADICT": 0,
+              "NEI": 10,
+              "ERROR": 0
+            },
+            "CONTRADICT": {
+              "SUPPORT": 0,
+              "CONTRADICT": 13,
+              "NEI": 8,
+              "ERROR": 0
+            },
+            "NEI": {
+              "SUPPORT": 4,
+              "CONTRADICT": 3,
+              "NEI": 31,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "operational_errors": 0,
+      "target_met": false
+    },
+    {
+      "suite": "title_oracle",
+      "run_id": "nli_titlefamily_oracle_v1",
+      "metrics": {
+        "n_claims": 100,
+        "unit": "claims",
+        "covered": 100,
+        "coverage": 1.0,
+        "correct": 81,
+        "accuracy": 0.81,
+        "accuracy_on_covered": 0.81,
+        "per_class": {
+          "SUPPORT": {
+            "precision": 0.9696969696969697,
+            "recall": 0.7804878048780488,
+            "f1": 0.8648648648648649,
+            "support": 41
+          },
+          "CONTRADICT": {
+            "precision": 1.0,
+            "recall": 0.5714285714285714,
+            "f1": 0.7272727272727273,
+            "support": 21
+          },
+          "NEI": {
+            "precision": 0.6727272727272727,
+            "recall": 0.9736842105263158,
+            "f1": 0.7956989247311828,
+            "support": 38
+          }
+        },
+        "macro_f1": 0.795945505622925,
+        "macro_f1_labels": [
+          "SUPPORT",
+          "CONTRADICT",
+          "NEI"
+        ],
+        "confusion": {
+          "rows": "gold",
+          "columns": "predicted",
+          "matrix": {
+            "SUPPORT": {
+              "SUPPORT": 32,
+              "CONTRADICT": 0,
+              "NEI": 9,
+              "ERROR": 0
+            },
+            "CONTRADICT": {
+              "SUPPORT": 0,
+              "CONTRADICT": 12,
+              "NEI": 9,
+              "ERROR": 0
+            },
+            "NEI": {
+              "SUPPORT": 1,
+              "CONTRADICT": 0,
+              "NEI": 37,
+              "ERROR": 0
+            }
+          }
+        }
+      },
+      "operational_errors": 0,
+      "target_met": false
+    }
+  ],
+  "pooled_validation_300": {
+    "n_claims": 300,
+    "unit": "claims",
+    "covered": 300,
+    "coverage": 1.0,
+    "correct": 242,
+    "accuracy": 0.8066666666666666,
+    "accuracy_on_covered": 0.8066666666666666,
+    "per_class": {
+      "SUPPORT": {
+        "precision": 0.9514563106796117,
+        "recall": 0.7903225806451613,
+        "f1": 0.8634361233480177,
+        "support": 124
+      },
+      "CONTRADICT": {
+        "precision": 0.84,
+        "recall": 0.65625,
+        "f1": 0.7368421052631579,
+        "support": 64
+      },
+      "NEI": {
+        "precision": 0.6938775510204082,
+        "recall": 0.9107142857142857,
+        "f1": 0.7876447876447876,
+        "support": 112
+      }
+    },
+    "macro_f1": 0.7959743387519879,
+    "macro_f1_labels": [
+      "SUPPORT",
+      "CONTRADICT",
+      "NEI"
+    ],
+    "confusion": {
+      "rows": "gold",
+      "columns": "predicted",
+      "matrix": {
+        "SUPPORT": {
+          "SUPPORT": 98,
+          "CONTRADICT": 3,
+          "NEI": 23,
+          "ERROR": 0
+        },
+        "CONTRADICT": {
+          "SUPPORT": 0,
+          "CONTRADICT": 42,
+          "NEI": 22,
+          "ERROR": 0
+        },
+        "NEI": {
+          "SUPPORT": 5,
+          "CONTRADICT": 5,
+          "NEI": 102,
+          "ERROR": 0
+        }
+      }
+    }
+  },
+  "population_note": "Previously evaluated validation cohorts; not a new blind test",
+  "target_met": false
+}
