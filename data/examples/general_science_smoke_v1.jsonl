@@ -1,0 +1,15 @@
+{"claim_id":"demo-01","claim":"Water molecules contain hydrogen and oxygen atoms.","label":"SUPPORT"}
+{"claim_id":"demo-02","claim":"Electrons carry a negative electric charge.","label":"SUPPORT"}
+{"claim_id":"demo-03","claim":"Earth orbits the Sun.","label":"SUPPORT"}
+{"claim_id":"demo-04","claim":"Photosynthesis converts light energy into chemical energy.","label":"SUPPORT"}
+{"claim_id":"demo-05","claim":"Water is commonly called the universal solvent.","label":"SUPPORT"}
+{"claim_id":"demo-06","claim":"Water molecules consist entirely of carbon atoms.","label":"CONTRADICT"}
+{"claim_id":"demo-07","claim":"Electrons carry a positive electric charge.","label":"CONTRADICT"}
+{"claim_id":"demo-08","claim":"The Sun orbits Earth once each year.","label":"CONTRADICT"}
+{"claim_id":"demo-09","claim":"The mass and weight of an object are the same physical quantity.","label":"CONTRADICT"}
+{"claim_id":"demo-10","claim":"The Moon is a star.","label":"CONTRADICT"}
+{"claim_id":"demo-11","claim":"The unpublished mineral sample BX-204 contains exactly 2.31 percent copper.","label":"NEI"}
+{"claim_id":"demo-12","claim":"An unpublished experiment in Room 17 measured the speed of sound as 346.271 meters per second yesterday.","label":"NEI"}
+{"claim_id":"demo-13","claim":"The unreported plant sample PL-204 produced exactly 17.23 grams of glucose yesterday.","label":"NEI"}
+{"claim_id":"demo-14","claim":"An unpublished observation of star QZ-204 measured a surface temperature of exactly 5731 kelvin.","label":"NEI"}
+{"claim_id":"demo-15","claim":"An undocumented battery labelled BT-204 supplied exactly 4.731 amperes at noon yesterday.","label":"NEI"}

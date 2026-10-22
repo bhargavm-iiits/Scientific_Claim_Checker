@@ -1,0 +1,7 @@
+{
+  "purpose": "development_smoke",
+  "source": "Assistant-authored demonstrations for the new textbook retrieval mode, before inference",
+  "label_review": "Not independently human reviewed",
+  "limitations": "Fifteen simple, deliberately selected examples, including invented private sample identifiers for abstention. They are not representative of general science and cannot establish95% accuracy. Do not tune thresholds against these labels and present the same examples as a holdout.",
+  "classes": ["SUPPORT", "CONTRADICT", "NEI"]
+}
