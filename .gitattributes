@@ -1,0 +1,7 @@
+# Frozen research protocols hash source/configuration bytes. Preserve those
+# bytes across Windows/Linux checkouts instead of applying autocrlf conversion.
+* -text
+
+# Documentation is not part of the frozen inference-source identities.
+*.md text eol=lf
+*.svg text eol=lf
